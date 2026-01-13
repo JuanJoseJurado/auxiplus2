@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Asistencia Urgente 24h - Auxiplus</title>
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../dist/css/output.css">
+    </head>
+    <body class="bg-background-light dark:bg-background-dark text-[#131118] dark:text-white transition-colors duration-200">
+        <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+            <header class="sticky top-0 z-50 w-full border-b border-[#f2f2f3] bg-white/95 backdrop-blur-sm dark:bg-[#18171b]/95 dark:border-gray-800">
+                <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+                    <!-- Logo -->
+                    <a href="https://juanjosejurado.github.io/auxiplus/" class="flex items-center gap-3">
+                        <div class="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                            <span class="material-symbols-outlined text-3xl">medical_services</span>
+                        </div>
+                        <span class="text-xl font-bold tracking-tight text-text-main dark:text-white">Auxiplus</span>
+                    </a>
+                    <!-- NAV DESKTOP -->
+                    <nav class="hidden lg:flex items-center gap-6" role="navigation" aria-label="Menú principal">
+                        <!-- Servicios -->
+                        <div class="relative group">
+                            <a href="https://juanjosejurado.github.io/auxiplus/servicios" class="flex items-center gap-1 text-sm font-medium text-text-main hover:text-primary dark:text-gray-300 dark:hover:text-white">
+                                Servicios
+                                <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+                            </a>
+                            <div class="absolute top-full left-0 mt-2 w-64 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#18171b] shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                                <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_mayores">Cuidado de Mayores</a>
+                                <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_dependientes">Asistencia a Dependientes</a>
+                                <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/apoyo_mujeres_supervivientes">Apoyo a Mujeres Supervivientes</a>
+                                <a class="block px-4 py-2 text-sm font-semibold text-primary bg-primary/5 rounded-lg" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">Asistencia Urgente 24h</a>
+                            </div>
+                        </div>
+                        <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">Nosotros</a>
+                        <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/calculadora_de_precios">Calculadora</a>
+                        <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">Cobertura</a>
+                        <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/blog">Blog</a>
+                        <a class="text-sm font-medium hover:text-primary" href="#faq">Preguntas</a>
+                        <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/contacto">Contacto</a>
+                    </nav>
+                    <!-- CTA + MOBILE -->
+                    <div class="flex items-center gap-3">
+                        <a href="tel:+34900123456" class="hidden sm:flex items-center gap-2 rounded-lg h-10 px-5 bg-primary hover:bg-primary-dark text-white text-sm font-bold transition shadow-sm focus:ring-2 ring-primary">
+                            <span class="material-symbols-outlined text-[18px]">call</span>
+                            Llámanos
+                        </a>
+                        <button id="mobile-menu-btn" class="flex lg:hidden p-2 text-gray-600 dark:text-gray-300" aria-label="Abrir menú">
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- MENU MOBILE -->
+                <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-[#18171b]">
+                    <nav class="px-4 py-6 space-y-6">
+                        <!-- Servicios -->
+                        <details class="group">
+                            <summary class="flex items-center justify-between h-12 px-2 text-sm font-semibold rounded-lg cursor-pointer active:bg-gray-100 dark:active:bg-gray-800">
+                                Servicios
+                                <span class="material-symbols-outlined transition-transform group-open:rotate-180">
+                                    expand_more
+                                </span>
+                            </summary>
+                            <div class="mt-4 space-y-2 pl-4">
+                                <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_mayores">
+                                    Cuidado de Mayores
+                                </a>
+                                <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_dependientes">
+                                    Asistencia a Dependientes
+                                </a>
+                                <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/apoyo_mujeres_supervivientes">
+                                    Apoyo a Mujeres Supervivientes
+                                </a>
+                                <a class="flex items-center h-11 px-3 rounded-lg text-sm font-semibold text-primary bg-primary/10" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">
+                                    Asistencia Urgente 24h
+                                </a>
+                            </div>
+                        </details>
+                        <!-- Enlaces principales -->
+                        <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">
+                            Nosotros
+                        </a>
+                        <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/calculadora_de_precios">
+                            Calculadora
+                        </a>
+                        <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">
+                            Cobertura
+                        </a>
+                        <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/blog">
+                            Blog
+                        </a>
+                        <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="#faq">
+                            Preguntas
+                        </a>
+                        <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/contacto">
+                            Contacto
+                        </a>
+                        <!-- CTA PRINCIPAL MOBILE -->
+                        <a href="tel:+34900123456" class="mt-6 flex items-center justify-center gap-2 h-12 rounded-lg bg-primary text-white text-sm font-bold shadow-md active:bg-primary/90">
+                            <span class="material-symbols-outlined text-[18px]">call</span>
+                            Llámanos ahora
+                        </a>
+                    </nav>
+                </div>
+            </header>
+            <div class="relative w-full">
+                <div class="flex min-h-[550px] flex-col items-center justify-center gap-8 bg-cover bg-center bg-no-repeat px-4 py-20 text-center relative" data-alt="caring nurse holding hand of senior patient comforting close up" style='background-image: linear-gradient(rgba(31, 29, 36, 0.7) 0%, rgba(31, 29, 36, 0.85) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBqB4OUzTQBUuRehTc0kdswm4YGxYbNoyZqzVoTM8fzMF_-BNOjJQWp5lKOZUY5PLWlaNb2QtDowWgN45VxLVXGIW2CVODelGyocsMGKv7UszKS49xM132X5boZ7Mb2azfAt4o8dsruuC84EvYoyyB6CoiyfsOAJL3yyOfizaFltjF12d3eHpVevjP56Qm7OHCCaq0V_nW1fcd_ujjJeEJR0QO3IKeo43PlaLDGS3rI8aNuRObJlIlKkWpyjSryKJh2-_OGa8Ro7hc");'>
+                    <div class="relative z-10 flex flex-col items-center gap-4 max-w-[800px]">
+                        <span class="inline-flex items-center gap-2 rounded-full bg-red-500/20 px-3 py-1 text-xs font-bold uppercase tracking-wide text-red-100 backdrop-blur-sm border border-red-500/30">
+                            <span class="relative flex h-2 w-2">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                            </span>
+                            Disponible ahora
+                        </span>
+                        <h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl lg:text-6xl">
+                            Asistencia Inmediata 24h en Córdoba y Andalucía
+                        </h1>
+                        <h2 class="text-gray-200 text-base font-normal leading-relaxed md:text-lg max-w-[600px]">
+                            Estamos contigo cuando más nos necesitas. Disponibilidad inmediata, profesionales certificados y llegada en menos de 1 hora.
+                        </h2>
+                    </div>
+                    <div class="relative z-10 flex flex-wrap gap-4 justify-center w-full max-w-[600px]">
+                        <button class="flex flex-1 min-w-[200px] items-center justify-center gap-2 rounded-lg h-14 px-6 bg-primary hover:bg-primary/90 text-white text-base font-bold shadow-xl shadow-primary/30 transition-all transform hover:scale-[1.02]">
+                            <span class="material-symbols-outlined">call</span>
+                            <span class="truncate">Llamar Ahora (900 12 34 56)</span>
+                        </button>
+                        <button class="flex flex-1 min-w-[200px] items-center justify-center gap-2 rounded-lg h-14 px-6 bg-white hover:bg-gray-50 text-[#131118] text-base font-bold shadow-lg transition-all transform hover:scale-[1.02]">
+                            <span class="material-symbols-outlined text-green-600">chat</span>
+                            <span class="truncate">WhatsApp Urgente</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full bg-white dark:bg-[#26242C] py-16 px-4 md:px-10 lg:px-20">
+                <div class="mx-auto max-w-[1024px] flex flex-col gap-10">
+                    <div class="text-center space-y-2">
+                        <h2 class="text-[#131118] dark:text-white text-3xl font-bold leading-tight">Vías de Contacto Directo</h2>
+                        <p class="text-gray-500 dark:text-gray-400">Selecciona el método más rápido para ti. Prioridad absoluta a llamadas.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="group relative flex flex-col gap-6 rounded-2xl border-2 border-primary/10 bg-background-light dark:bg-[#2A2830] p-8 shadow-sm hover:border-primary/30 transition-all">
+                            <div class="flex items-center justify-between">
+                                <div class="flex size-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                    <span class="material-symbols-outlined text-[32px]">phone_in_talk</span>
+                                </div>
+                                <span class="rounded-full bg-green-100 dark:bg-green-900/30 px-3 py-1 text-xs font-bold text-green-700 dark:text-green-400">Respuesta Inmediata</span>
+                            </div>
+                            <div>
+                                <h3 class="text-[#131118] dark:text-white text-xl font-bold">Llamada Gratuita 24h</h3>
+                                <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Atención personal inmediata las 24 horas del día, los 365 días del año.</p>
+                            </div>
+                            <a class="mt-auto flex w-full items-center justify-center rounded-lg bg-primary py-4 text-white font-bold text-lg shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all" href="#">
+                                900 12 34 56
+                            </a>
+                        </div>
+                        <div class="group relative flex flex-col gap-6 rounded-2xl border border-gray-200 dark:border-[#423F4A] bg-white dark:bg-[#26242C] p-8 shadow-sm hover:border-gray-300 dark:hover:border-[#524F5A] transition-all">
+                            <div class="flex items-center justify-between">
+                                <div class="flex size-14 items-center justify-center rounded-full bg-green-50 dark:bg-green-900/10 text-green-600">
+                                    <span class="material-symbols-outlined text-[32px]">chat</span>
+                                </div>
+                                <span class="rounded-full bg-gray-100 dark:bg-gray-800 px-3 py-1 text-xs font-bold text-gray-600 dark:text-gray-400">Respuesta &lt; 5 min</span>
+                            </div>
+                            <div>
+                                <h3 class="text-[#131118] dark:text-white text-xl font-bold">Chat WhatsApp</h3>
+                                <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Escríbenos para consultas rápidas o enviar ubicación directa.</p>
+                            </div>
+                            <a class="mt-auto flex w-full items-center justify-center rounded-lg bg-[#f1f0f4] dark:bg-[#383640] border border-transparent hover:border-gray-300 dark:hover:border-gray-500 py-4 text-[#131118] dark:text-white font-bold text-lg transition-all gap-2" href="#">
+                                <span>Abrir Chat</span>
+                                <span class="material-symbols-outlined text-sm">open_in_new</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full py-20 px-4 md:px-10 lg:px-20 bg-background-light dark:bg-[#1F1D24]">
+                <div class="mx-auto max-w-[1024px] flex flex-col gap-12">
+                    <div class="flex flex-col gap-4 text-center md:text-left">
+                        <h2 class="text-[#131118] dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-tight max-w-[720px]">
+                            ¿Cómo funciona nuestra asistencia urgente?
+                        </h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-lg font-normal leading-normal max-w-[600px]">
+                            Un protocolo simplificado para darte tranquilidad y soluciones en momentos críticos.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-[#36343D] bg-white dark:bg-[#26242C] p-6 shadow-sm">
+                            <div class="flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                                <span class="material-symbols-outlined text-[28px]">notification_important</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-[#131118] dark:text-white text-lg font-bold">1. Contacto Inmediato</h3>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                    Llámanos a cualquier hora. Nuestro centro de coordinación te atiende sin esperas ni contestadores automáticos.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-[#36343D] bg-white dark:bg-[#26242C] p-6 shadow-sm">
+                            <div class="flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                                <span class="material-symbols-outlined text-[28px]">clinical_notes</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-[#131118] dark:text-white text-lg font-bold">2. Valoración Express</h3>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                    Evaluamos la situación telefónicamente para seleccionar al especialista y equipo adecuado para tu caso.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-[#36343D] bg-white dark:bg-[#26242C] p-6 shadow-sm">
+                            <div class="flex size-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                                <span class="material-symbols-outlined text-[28px]">ambulance</span>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-[#131118] dark:text-white text-lg font-bold">3. Asistencia en Casa</h3>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                                    Un cuidador o sanitario certificado se desplaza a tu domicilio en Córdoba o Andalucía en tiempo récord.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full bg-white dark:bg-[#26242C] border-y border-gray-100 dark:border-[#36343D]">
+                <div class="layout-container flex justify-center py-16 px-4">
+                    <div class="flex flex-col md:flex-row items-center gap-10 max-w-[1024px] w-full">
+                        <div class="flex-1 space-y-4 text-center md:text-left">
+                            <h3 class="text-2xl font-bold text-[#131118] dark:text-white">Cobertura Total en Andalucía</h3>
+                            <p class="text-gray-600 dark:text-gray-400">
+                                Nuestra red de profesionales cubre capitales y provincias. Con sede central en Córdoba, garantizamos tiempos de respuesta mínimos en toda la región.
+                            </p>
+                            <div class="flex flex-wrap gap-4 justify-center md:justify-start pt-2">
+                                <div class="flex items-center gap-2 text-sm font-medium text-primary bg-primary/5 px-3 py-1.5 rounded-full">
+                                    <span class="material-symbols-outlined text-[18px]">verified</span>
+                                    Profesionales Certificados
+                                </div>
+                                <div class="flex items-center gap-2 text-sm font-medium text-primary bg-primary/5 px-3 py-1.5 rounded-full">
+                                    <span class="material-symbols-outlined text-[18px]">shield</span>
+                                    Servicio Garantizado
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex-1 w-full h-[240px] rounded-xl overflow-hidden shadow-md relative group">
+                            <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors z-10"></div>
+                            <div class="w-full h-full bg-cover bg-center" data-location="Map of Andalusia region Spain" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7VejxhvGkAMYkxbRrTwCADBfzRcj8dBYUJTzEGZX8AGLj5Lm_QsX7frtVsSOw60SM8ig2huY4uK7ryq3Ay5OTxE6dEusnX3L5xj7NdjBAjRMXxc8XmzOv3J-rw6txK8h-o5PF_n_7FoTiqTTPC4QhiLXXUgD7_CSxDCvMzhTfVauK8wYFeWsmq4LLZVUjTAFSUc0ZaCRTMYBhg2DrxExcgr8BY3AAzxeRjoY0h8Kysn0YKCRTn_dq7oV4qF5TXwOYVKBlvl5dkGs");'></div>
+                            <div class="absolute bottom-4 left-4 z-20 bg-white dark:bg-[#2A2830] px-3 py-1 rounded shadow-sm text-xs font-bold flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[14px] text-primary">location_on</span>
+                                Córdoba &amp; Andalucía
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fixed bottom-0 left-0 right-0 z-50 flex p-4 md:hidden gap-3 bg-white/90 dark:bg-[#26242C]/90 backdrop-blur-md border-t border-gray-200 dark:border-[#36343D] shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+                <button class="flex-1 flex items-center justify-center gap-2 rounded-lg h-12 bg-primary text-white font-bold shadow-lg shadow-primary/20">
+                    <span class="material-symbols-outlined">call</span>
+                    Llamar
+                </button>
+                <button class="flex size-12 items-center justify-center rounded-lg bg-green-500 text-white font-bold shadow-lg">
+                    <span class="material-symbols-outlined">chat</span>
+                </button>
+            </div>
+            <footer class="bg-white border-t border-gray-200 pt-16 pb-8 dark:bg-[#18171b] dark:border-gray-800" id="contacto">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center gap-2 text-primary">
+                                <span class="material-symbols-outlined text-3xl">medical_services</span>
+                                <span class="text-xl font-bold text-text-main dark:text-white">Auxiplus</span>
+                            </div>
+                            <p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
+                                Comprometidos con el bienestar de las familias en Andalucía. Cuidamos de los tuyos como si fueran los nuestros.
+                            </p>
+                            <div class="flex gap-4 pt-2">
+                                <a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white" href="#">
+                                    <span class="sr-only">Facebook</span>
+                                    <svg
+                                        aria-hidden="true"
+                                        class="h-6 w-6"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                                <a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white" href="#">
+                                    <span class="sr-only">Instagram</span>
+                                    <svg
+                                        aria-hidden="true"
+                                        class="h-6 w-6"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.373c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Explora</h3>
+                            <ul class="flex flex-col gap-3">
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">Sobre Nosotros</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">Cobertura en Andalucía</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Blog y Recursos</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-red-500 hover:text-red-600 font-semibold" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">Asistencia Urgente 24h</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Blog</h3>
+                            <ul class="flex flex-col gap-3">
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Cuidados</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Dependencia</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Recursos</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Mujeres supervivientes</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Contacto</h3>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-start gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
+                                    <span class="text-sm text-text-muted dark:text-gray-400">
+                                        Av. Gran Capitán 23, 14008
+                                        <br>
+                                        Córdoba, España
+                                    </span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">call</span>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="tel:+34900000000">+34 900 000 000</a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">mail</span>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="mailto:info@auxiplus.com">info@auxiplus.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-12 border-t border-gray-100 pt-8 dark:border-gray-800">
+                        <p class="text-center text-xs text-text-muted dark:text-gray-500">
+                            © 2026 Auxiplus Asistencia a Domicilio. Todos los derechos reservados.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+        </script>
+    </body>
+</html>

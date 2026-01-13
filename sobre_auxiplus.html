@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Sobre Auxiplus - Quiénes Somos</title>
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="dist/css/output.css">
+    </head>
+    <body class="bg-background-light dark:bg-background-dark text-[#141315] dark:text-white font-body">
+        <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+            <header class="sticky top-0 z-50 w-full border-b border-[#f2f2f3] bg-white/95 backdrop-blur-sm dark:bg-[#18171b]/95 dark:border-gray-800">
+                <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+                    <!-- Logo -->
+                    <a href="https://juanjosejurado.github.io/auxiplus/" class="flex items-center gap-3">
+                        <div class="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                            <span class="material-symbols-outlined text-3xl">medical_services</span>
+                        </div>
+                        <span class="text-xl font-bold tracking-tight text-text-main dark:text-white">Auxiplus</span>
+                    </a>
+                    <!-- NAV DESKTOP -->
+                    <nav class="hidden lg:flex items-center gap-6" role="navigation" aria-label="Menú principal">
+                        <!-- Servicios -->
+                        <div class="relative group">
+                            <a href="https://juanjosejurado.github.io/auxiplus/servicios" class="flex items-center gap-1 text-sm font-medium text-text-main hover:text-primary dark:text-gray-300 dark:hover:text-white">
+                                Servicios
+                                <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+                            </a>
+                            <div class="absolute top-full left-0 mt-2 w-64 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#18171b] shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                                <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_mayores">Cuidado de Mayores</a>
+                                <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_dependientes">Asistencia a Dependientes</a>
+                                <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/apoyo_mujeres_supervivientes">Apoyo a Mujeres Supervivientes</a>
+                                <a class="block px-4 py-2 text-sm font-semibold text-primary bg-primary/5 rounded-lg" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">Asistencia Urgente 24h</a>
+                            </div>
+                        </div>
+                        <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">Nosotros</a>
+                        <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/calculadora_de_precios">Calculadora</a>
+                        <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">Cobertura</a>
+                        <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/blog">Blog</a>
+                        <a class="text-sm font-medium hover:text-primary" href="#faq">Preguntas</a>
+                        <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/contacto">Contacto</a>
+                    </nav>
+                    <!-- CTA + MOBILE -->
+                    <div class="flex items-center gap-3">
+                        <a href="tel:+34900123456" class="hidden sm:flex items-center gap-2 rounded-lg h-10 px-5 bg-primary hover:bg-primary-dark text-white text-sm font-bold transition shadow-sm focus:ring-2 ring-primary">
+                            <span class="material-symbols-outlined text-[18px]">call</span>
+                            Llámanos
+                        </a>
+                        <button id="mobile-menu-btn" class="flex lg:hidden p-2 text-gray-600 dark:text-gray-300" aria-label="Abrir menú">
+                            <span class="material-symbols-outlined">menu</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- MENU MOBILE -->
+                <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-[#18171b]">
+                    <nav class="px-4 py-6 space-y-6">
+                        <!-- Servicios -->
+                        <details class="group">
+                            <summary class="flex items-center justify-between h-12 px-2 text-sm font-semibold rounded-lg cursor-pointer active:bg-gray-100 dark:active:bg-gray-800">
+                                Servicios
+                                <span class="material-symbols-outlined transition-transform group-open:rotate-180">
+                                    expand_more
+                                </span>
+                            </summary>
+                            <div class="mt-4 space-y-2 pl-4">
+                                <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_mayores">
+                                    Cuidado de Mayores
+                                </a>
+                                <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_dependientes">
+                                    Asistencia a Dependientes
+                                </a>
+                                <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/apoyo_mujeres_supervivientes">
+                                    Apoyo a Mujeres Supervivientes
+                                </a>
+                                <a class="flex items-center h-11 px-3 rounded-lg text-sm font-semibold text-primary bg-primary/10" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">
+                                    Asistencia Urgente 24h
+                                </a>
+                            </div>
+                        </details>
+                        <!-- Enlaces principales -->
+                        <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">
+                            Nosotros
+                        </a>
+                        <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/calculadora_de_precios">
+                            Calculadora
+                        </a>
+                        <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">
+                            Cobertura
+                        </a>
+                        <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/blog">
+                            Blog
+                        </a>
+                        <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="#faq">
+                            Preguntas
+                        </a>
+                        <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/contacto">
+                            Contacto
+                        </a>
+                        <!-- CTA PRINCIPAL MOBILE -->
+                        <a href="tel:+34900123456" class="mt-6 flex items-center justify-center gap-2 h-12 rounded-lg bg-primary text-white text-sm font-bold shadow-md active:bg-primary/90">
+                            <span class="material-symbols-outlined text-[18px]">call</span>
+                            Llámanos ahora
+                        </a>
+                    </nav>
+                </div>
+            </header>
+            <div class="w-full bg-white dark:bg-background-dark">
+                <div class="max-w-[1200px] mx-auto px-4 md:px-8 py-8 md:py-12">
+                    <div class="@container">
+                        <div class="flex min-h-[400px] md:min-h-[500px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-6 md:p-12 relative overflow-hidden" data-alt="Caregiver smiling warmly while holding the hand of an elderly woman in a cozy living room" style='background-image: linear-gradient(rgba(107, 91, 149, 0.7) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsDciqp3EIdr5IhL2AubcUfTmsyhR8R05mxexC_Bf-RFTwOPzRuFpjpNNzHtdoOWxhF2g4gVLJ08v26Dp_kNNED-FTtBNLwh2H9v0uJF8hzhfymOWp59CwfKEUJUgx8v4-m-y_Qh2V6mFnVRir4EO9pxb-WoRwpDhGbjyklTmH0rWnzujS710hI7uWEcQ6G0mDU4ioJuDdpvLk4TG9RFLgx_n1HLDasS8JEgTPrdOQSzOT1EhMgVK_l1GjcJhVbehvJWzNes6WbAg");'>
+                            <div class="flex flex-col gap-4 text-center z-10 max-w-2xl">
+                                <h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-tight shadow-sm">
+                                    Sobre Auxiplus
+                                </h1>
+                                <h2 class="text-white/90 text-lg md:text-xl font-medium leading-relaxed">
+                                    Más que cuidados, somos familia. Llevamos tranquilidad y profesionalidad a los hogares de Córdoba y Andalucía.
+                                </h2>
+                            </div>
+                            <div class="z-10 mt-4">
+                                <button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-8 bg-white text-primary hover:bg-gray-100 transition-colors text-base font-bold shadow-lg">
+                                    <span class="truncate">Conoce nuestra historia</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full bg-background-light dark:bg-[#1e1e1e] py-12 md:py-20">
+                <div class="max-w-[960px] mx-auto px-4 md:px-8">
+                    <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+                        <div class="flex-1 w-full aspect-square md:aspect-[4/3] rounded-2xl bg-center bg-cover shadow-xl" data-alt="Senior man playing chess with a young caregiver in a garden setting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAk1fKo9IbE5bkNvzSROycG4U7bt6iRhKWa8i-FAsi0YszvPkPs8HdFR43kUoklXAyHMiJJx9M1di9V-BbcmThBCTUFmXfTL9jnWSoo0EJ_Q-X5ZRtbeb4gx9ZKAZsN0vNjwvQNtgZk7A9gugyArE50XAnWu2N85901kpmBFei43wAYvY7grCCHg3o5w-CNwQkMUKR4d3B_6K2C3iXP8CR4dHbK5MzeZSvClV9JARwSFSUb3h7QnHWqtWWf2uuoC20CSiPhcGGQZww");'></div>
+                        <div class="flex-1 flex flex-col gap-6">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 w-fit">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Nuestra Filosofía</span>
+                            </div>
+                            <h2 class="text-[#141315] dark:text-white text-3xl md:text-4xl font-bold leading-tight">
+                                Independencia y dignidad en su propio hogar
+                            </h2>
+                            <div class="space-y-4 text-gray-600 dark:text-gray-300">
+                                <p class="text-lg leading-relaxed">
+                                    Nos dedicamos a mejorar la calidad de vida de las personas mayores en Córdoba y Andalucía.
+                                </p>
+                                <p class="text-base leading-relaxed">
+                                    Nuestro objetivo es fomentar su independencia y dignidad en la comodidad de su hogar, brindando una asistencia que combina la más alta profesionalidad técnica con una calidez humana genuina. Creemos que envejecer en casa es un derecho, no un lujo.
+                                </p>
+                            </div>
+                            <div class="pt-2">
+                                <div class="flex items-center gap-4">
+                                    <div class="flex flex-col">
+                                        <span class="text-3xl font-bold text-primary">10+</span>
+                                        <span class="text-sm text-gray-500">Años de experiencia</span>
+                                    </div>
+                                    <div class="w-px h-10 bg-gray-300"></div>
+                                    <div class="flex flex-col">
+                                        <span class="text-3xl font-bold text-primary">500+</span>
+                                        <span class="text-sm text-gray-500">Familias atendidas</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full bg-white dark:bg-background-dark py-16 md:py-24">
+                <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+                    <div class="flex flex-col gap-4 text-center mb-12">
+                        <h2 class="text-[#141315] dark:text-white text-3xl md:text-4xl font-black tracking-tight">
+                            Nuestros Valores
+                        </h2>
+                        <p class="text-gray-500 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+                            Los pilares que sostienen cada visita, cada cuidado y cada sonrisa.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="flex flex-col items-center text-center gap-4 rounded-xl border border-[#e0dfe2] dark:border-[#333] bg-background-light dark:bg-[#1e1e1e] p-8 hover:shadow-md transition-shadow">
+                            <div class="size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                                <span class="material-symbols-outlined text-3xl">volunteer_activism</span>
+                            </div>
+                            <h3 class="text-[#141315] dark:text-white text-xl font-bold">Cercanía</h3>
+                            <p class="text-[#736f7b] dark:text-gray-400 text-sm leading-relaxed">
+                                Tratamos a su familia como la nuestra, con empatía, cariño y una escucha activa constante.
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-center text-center gap-4 rounded-xl border border-[#e0dfe2] dark:border-[#333] bg-background-light dark:bg-[#1e1e1e] p-8 hover:shadow-md transition-shadow">
+                            <div class="size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                                <span class="material-symbols-outlined text-3xl">medical_services</span>
+                            </div>
+                            <h3 class="text-[#141315] dark:text-white text-xl font-bold">Profesionalidad</h3>
+                            <p class="text-[#736f7b] dark:text-gray-400 text-sm leading-relaxed">
+                                Personal certificado, experimentado y en constante formación para todo tipo de necesidades.
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-center text-center gap-4 rounded-xl border border-[#e0dfe2] dark:border-[#333] bg-background-light dark:bg-[#1e1e1e] p-8 hover:shadow-md transition-shadow">
+                            <div class="size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2">
+                                <span class="material-symbols-outlined text-3xl">verified_user</span>
+                            </div>
+                            <h3 class="text-[#141315] dark:text-white text-xl font-bold">Confianza</h3>
+                            <p class="text-[#736f7b] dark:text-gray-400 text-sm leading-relaxed">
+                                Transparencia absoluta en cada paso, gestión administrativa clara y comunicación fluida.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full bg-background-light dark:bg-[#1e1e1e] py-16 md:py-24">
+                <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+                    <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                        <div class="max-w-2xl">
+                            <h2 class="text-[#141315] dark:text-white text-3xl md:text-4xl font-bold mb-4">Conoce al equipo</h2>
+                            <p class="text-gray-600 dark:text-gray-300 text-lg">Personas reales comprometidas con tu bienestar. Nuestro equipo de coordinación asegura que cada detalle esté cubierto.</p>
+                        </div>
+                        <a class="text-primary font-bold flex items-center gap-2 hover:underline" href="#">
+                            Ver todo el equipo
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-white dark:bg-[#252525] p-6 rounded-xl shadow-sm flex flex-col items-center text-center">
+                            <div class="w-32 h-32 rounded-full mb-4 bg-cover bg-center border-4 border-background-light dark:border-[#333]" data-alt="Portrait of Elena, general coordinator, smiling friendly" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxkaMoWNohXHGY6CTqyTOaMs-DfbhL90BA5plwDzG0S94xMGr_lPWr-ic9gSHKGc4sC6gbtLn8nG1_Z633MWtNKP5GDFpAwEaMqJkYFIsIsEEuKSy88a8fbqmFuFuS8mOXz4BuWYY9e_VFG9fh8ue3znx5Yucv86RjeZNkx5GIcmvzAycgv37XdbqnbsnF2x8qaq9iAJS7ILe2WoF_wGfnsM7XBfr7wFzyYEOJXldJw_HOd8tgoe3V0C8eBYmJLmI0KDSPhKXfPzY");'></div>
+                            <h3 class="text-lg font-bold text-[#141315] dark:text-white">Elena Ruiz</h3>
+                            <p class="text-sm text-primary font-medium mb-3">Coordinadora General</p>
+                            <p class="text-xs text-gray-500 italic">"Mi meta es que cada familia sienta que tiene un aliado incondicional."</p>
+                        </div>
+                        <div class="bg-white dark:bg-[#252525] p-6 rounded-xl shadow-sm flex flex-col items-center text-center">
+                            <div class="w-32 h-32 rounded-full mb-4 bg-cover bg-center border-4 border-background-light dark:border-[#333]" data-alt="Portrait of Dr. Carlos, medical supervisor, looking professional" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDv5IwLII9qLPLqzoLkEwA-KoZ7fetlnCF3O1dNDNhLJUQBEMtk9YA_AVa2tDi_YXTN01v8JHG22gfGD9c5CsGIGHEFfKy-KcOeQ-4eH97VfZeesj4tgPJtyzbNa7FobxD14mQ3Yv9i3w0-DlVL6QXonEuodxuh8nSAhd-WB45UKVxN4D0AioppP7TLOjjmBbShWmkiSkYd-rmsJ6USG_senV_qNIq2MaYmARWk-GBgNLbhdHXm_kBHFgIen_nTvGgkX50uqwuPOMA");'></div>
+                            <h3 class="text-lg font-bold text-[#141315] dark:text-white">Dr. Carlos Méndez</h3>
+                            <p class="text-sm text-primary font-medium mb-3">Supervisor Sanitario</p>
+                            <p class="text-xs text-gray-500 italic">"La salud en el hogar requiere precisión, pero sobre todo, humanidad."</p>
+                        </div>
+                        <div class="bg-white dark:bg-[#252525] p-6 rounded-xl shadow-sm flex flex-col items-center text-center">
+                            <div class="w-32 h-32 rounded-full mb-4 bg-cover bg-center border-4 border-background-light dark:border-[#333]" data-alt="Portrait of Sofia, social worker, smiling warmly" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAtVbMxDpt3W4FCfIR3kJ-2OUDXc5K4xu6mhm7qZbDMUvZbIvp6E_GntMyb-I3Nsc_gO-1mYICxCfbCPJ8WlJxGgMWVi8eHB6bGrJqJvhVzQ8Tugp5ud6CFV-9gy5d1922SHer-DVjlYnBI8qP4mS6ard6Y5OoMfcU3LKbvOfkf-456-hJKtUlnGo2S_2IeW61z4n24poA4o8gk8lc1nVwa8cVoz2FeCMPo8w24gzvqddfkG8pxhDJLOoinMubZCV9cny0DFSPDDwI");'></div>
+                            <h3 class="text-lg font-bold text-[#141315] dark:text-white">Sofía Almagro</h3>
+                            <p class="text-sm text-primary font-medium mb-3">Trabajadora Social</p>
+                            <p class="text-xs text-gray-500 italic">"Escuchar las historias de vida de nuestros mayores es el mayor regalo."</p>
+                        </div>
+                        <div class="bg-white dark:bg-[#252525] p-6 rounded-xl shadow-sm flex flex-col items-center text-center">
+                            <div class="w-32 h-32 rounded-full mb-4 bg-cover bg-center border-4 border-background-light dark:border-[#333]" data-alt="Portrait of Javier, logistics manager, efficient look" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAOPjPXL7YSEp_7so4GH4fYvSvPe_k5wJEJa__r-4C2wKAu5JFD8_Frbs0JsjsZhFlsIKRn7MfqVumih89oXx7Z0hynBXMRW8k0nVHLtVW-sj2jUszUGn-x-n9c4LlLXP8sepxhQTl3glvxtxSeuCgiMO0n8YFFMwDtvC0MBIRFY_B0iA6kzScs92EN9l2KGAzWZTCH4p5tvXgskRn0mxZpctt9f1FjuenvJE3i6jM9r7n_cCVzIRZe8UR6Szu01KxBGirnVi2VBFg");'></div>
+                            <h3 class="text-lg font-bold text-[#141315] dark:text-white">Javier Torres</h3>
+                            <p class="text-sm text-primary font-medium mb-3">Gestión y Logística</p>
+                            <p class="text-xs text-gray-500 italic">"Garantizar que la ayuda llegue a tiempo es mi compromiso diario."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full bg-white dark:bg-background-dark py-16">
+                <div class="max-w-[800px] mx-auto px-4 md:px-8 text-center">
+                    <span class="material-symbols-outlined text-4xl text-primary mb-6">format_quote</span>
+                    <blockquote class="text-xl md:text-2xl font-medium leading-relaxed text-[#141315] dark:text-white mb-6">
+                        "Desde que Auxiplus entró en nuestras vidas, mi madre ha recuperado la sonrisa. No son solo cuidadores, son compañeros de vida que nos dan una tranquilidad impagable en Córdoba."
+                    </blockquote>
+                    <div class="flex flex-col items-center gap-2">
+                        <p class="font-bold text-lg">María José Fernández</p>
+                        <p class="text-sm text-gray-500">Hija de usuaria en Córdoba Capital</p>
+                    </div>
+                    <div class="mt-12 pt-8 border-t border-gray-100 dark:border-gray-800 grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center opacity-60 grayscale hover:grayscale-0 transition-all duration-300">
+                        <div class="flex items-center justify-center gap-2 font-bold text-sm">
+                            <span class="material-symbols-outlined">verified</span>
+                            Certificado ISO
+                        </div>
+                        <div class="flex items-center justify-center gap-2 font-bold text-sm">
+                            <span class="material-symbols-outlined">apartment</span>
+                            Junta de Andalucía
+                        </div>
+                        <div class="flex items-center justify-center gap-2 font-bold text-sm">
+                            <span class="material-symbols-outlined">medical_information</span>
+                            SAD Concertado
+                        </div>
+                        <div class="flex items-center justify-center gap-2 font-bold text-sm">
+                            <span class="material-symbols-outlined">diversity_1</span>
+                            Ley de Dependencia
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full bg-primary py-12 md:py-16">
+                <div class="max-w-[1200px] mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div class="text-white max-w-2xl">
+                        <h2 class="text-3xl font-bold mb-3">¿Hablamos sobre lo que necesitas?</h2>
+                        <p class="text-indigo-100 text-lg opacity-90">Déjanos cuidar de lo que más importa. Solicita un plan de cuidados personalizado sin compromiso.</p>
+                    </div>
+                    <div class="flex gap-4">
+                        <button class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg font-bold shadow-lg transition-transform hover:-translate-y-0.5">
+                            Contactar ahora
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white border-t border-gray-200 pt-16 pb-8 dark:bg-[#18171b] dark:border-gray-800" id="contacto">
+                <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center gap-2 text-primary">
+                                <span class="material-symbols-outlined text-3xl">medical_services</span>
+                                <span class="text-xl font-bold text-text-main dark:text-white">Auxiplus</span>
+                            </div>
+                            <p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
+                                Comprometidos con el bienestar de las familias en Andalucía. Cuidamos de los tuyos como si fueran los nuestros.
+                            </p>
+                            <div class="flex gap-4 pt-2">
+                                <a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white" href="#">
+                                    <span class="sr-only">Facebook</span>
+                                    <svg
+                                        aria-hidden="true"
+                                        class="h-6 w-6"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                                <a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white" href="#">
+                                    <span class="sr-only">Instagram</span>
+                                    <svg
+                                        aria-hidden="true"
+                                        class="h-6 w-6"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.373c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Explora</h3>
+                            <ul class="flex flex-col gap-3">
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">Sobre Nosotros</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">Cobertura en Andalucía</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Blog y Recursos</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-red-500 hover:text-red-600 font-semibold" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">Asistencia Urgente 24h</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Blog</h3>
+                            <ul class="flex flex-col gap-3">
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Cuidados</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Dependencia</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Recursos</a>
+                                </li>
+                                <li>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Mujeres supervivientes</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Contacto</h3>
+                            <ul class="flex flex-col gap-3">
+                                <li class="flex items-start gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
+                                    <span class="text-sm text-text-muted dark:text-gray-400">
+                                        Av. Gran Capitán 23, 14008
+                                        <br>
+                                        Córdoba, España
+                                    </span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">call</span>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="tel:+34900000000">+34 900 000 000</a>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-primary text-sm">mail</span>
+                                    <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="mailto:info@auxiplus.com">info@auxiplus.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-12 border-t border-gray-100 pt-8 dark:border-gray-800">
+                        <p class="text-center text-xs text-text-muted dark:text-gray-500">
+                            © 2026 Auxiplus Asistencia a Domicilio. Todos los derechos reservados.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+        </script>
+    </body>
+</html>

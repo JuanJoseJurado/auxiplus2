@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Blog Auxiplus - Noticias y Consejos</title>
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Poppins:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="dist/css/output.css">
+
+    </head>
+    <body class="bg-background-light dark:bg-background-dark text-[#2D2A32] dark:text-[#EAE9ED] min-h-screen flex flex-col font-body selection:bg-primary/20 selection:text-primary">
+        <header class="sticky top-0 z-50 w-full border-b border-[#f2f2f3] bg-white/95 backdrop-blur-sm dark:bg-[#18171b]/95 dark:border-gray-800">
+            <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+                <!-- Logo -->
+                <a href="https://juanjosejurado.github.io/auxiplus/" class="flex items-center gap-3">
+                    <div class="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined text-3xl">medical_services</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-text-main dark:text-white">Auxiplus</span>
+                </a>
+                <!-- NAV DESKTOP -->
+                <nav class="hidden lg:flex items-center gap-6" role="navigation" aria-label="Menú principal">
+                    <!-- Servicios -->
+                    <div class="relative group">
+                        <a href="https://juanjosejurado.github.io/auxiplus/servicios" class="flex items-center gap-1 text-sm font-medium text-text-main hover:text-primary dark:text-gray-300 dark:hover:text-white">
+                            Servicios
+                            <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+                        </a>
+                        <div class="absolute top-full left-0 mt-2 w-64 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#18171b] shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                            <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_mayores">Cuidado de Mayores</a>
+                            <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_dependientes">Asistencia a Dependientes</a>
+                            <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/apoyo_mujeres_supervivientes">Apoyo a Mujeres Supervivientes</a>
+                            <a class="block px-4 py-2 text-sm font-semibold text-primary bg-primary/5 rounded-lg" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">Asistencia Urgente 24h</a>
+                        </div>
+                    </div>
+                    <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">Nosotros</a>
+                    <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/calculadora_de_precios">Calculadora</a>
+                    <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">Cobertura</a>
+                    <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/blog">Blog</a>
+                    <a class="text-sm font-medium hover:text-primary" href="#faq">Preguntas</a>
+                    <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/contacto">Contacto</a>
+                </nav>
+                <!-- CTA + MOBILE -->
+                <div class="flex items-center gap-3">
+                    <a href="tel:+34900123456" class="hidden sm:flex items-center gap-2 rounded-lg h-10 px-5 bg-primary hover:bg-primary-dark text-white text-sm font-bold transition shadow-sm focus:ring-2 ring-primary">
+                        <span class="material-symbols-outlined text-[18px]">call</span>
+                        Llámanos
+                    </a>
+                    <button id="mobile-menu-btn" class="flex lg:hidden p-2 text-gray-600 dark:text-gray-300" aria-label="Abrir menú">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+            <!-- MENU MOBILE -->
+            <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-[#18171b]">
+                <nav class="px-4 py-6 space-y-6">
+                    <!-- Servicios -->
+                    <details class="group">
+                        <summary class="flex items-center justify-between h-12 px-2 text-sm font-semibold rounded-lg cursor-pointer active:bg-gray-100 dark:active:bg-gray-800">
+                            Servicios
+                            <span class="material-symbols-outlined transition-transform group-open:rotate-180">
+                                expand_more
+                            </span>
+                        </summary>
+                        <div class="mt-4 space-y-2 pl-4">
+                            <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_mayores">
+                                Cuidado de Mayores
+                            </a>
+                            <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_dependientes">
+                                Asistencia a Dependientes
+                            </a>
+                            <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/apoyo_mujeres_supervivientes">
+                                Apoyo a Mujeres Supervivientes
+                            </a>
+                            <a class="flex items-center h-11 px-3 rounded-lg text-sm font-semibold text-primary bg-primary/10" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">
+                                Asistencia Urgente 24h
+                            </a>
+                        </div>
+                    </details>
+                    <!-- Enlaces principales -->
+                    <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">
+                        Nosotros
+                    </a>
+                    <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/calculadora_de_precios">
+                        Calculadora
+                    </a>
+                    <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">
+                        Cobertura
+                    </a>
+                    <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/blog">
+                        Blog
+                    </a>
+                    <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="#faq">
+                        Preguntas
+                    </a>
+                    <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/contacto">
+                        Contacto
+                    </a>
+                    <!-- CTA PRINCIPAL MOBILE -->
+                    <a href="tel:+34900123456" class="mt-6 flex items-center justify-center gap-2 h-12 rounded-lg bg-primary text-white text-sm font-bold shadow-md active:bg-primary/90">
+                        <span class="material-symbols-outlined text-[18px]">call</span>
+                        Llámanos ahora
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <main class="flex-grow">
+            <section class="relative pt-12 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div class="max-w-2xl">
+                        <h1 class="text-4xl md:text-5xl font-black tracking-tight text-[#2D2A32] dark:text-white mb-4">
+                            Noticias y Consejos
+                        </h1>
+                        <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Información útil sobre cuidados, dependencia y asistencia a domicilio en Córdoba y Andalucía.
+                        </p>
+                    </div>
+                    <div class="w-full md:w-auto md:min-w-[320px]">
+                        <div class="relative group">
+                            <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <span class="material-symbols-outlined text-gray-400 group-focus-within:text-primary transition-colors">search</span>
+                            </div>
+                            <input class="block w-full pl-10 pr-3 py-3 border-none rounded-lg leading-5 bg-white dark:bg-[#332F3E] text-gray-900 dark:text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="Buscar artículos..." type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 flex flex-wrap gap-3">
+                    <a class="inline-flex items-center px-4 py-2 rounded-full bg-primary text-white text-sm font-medium shadow-md shadow-primary/20 transition-transform hover:-translate-y-0.5" href="#">
+                        Todos
+                    </a>
+                    <a class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-[#332F3E] text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 text-sm font-medium hover:border-primary hover:text-primary dark:hover:text-primary transition-all hover:-translate-y-0.5" href="#">
+                        Cuidados
+                    </a>
+                    <a class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-[#332F3E] text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 text-sm font-medium hover:border-primary hover:text-primary dark:hover:text-primary transition-all hover:-translate-y-0.5" href="#">
+                        Dependencia
+                    </a>
+                    <a class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-[#332F3E] text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 text-sm font-medium hover:border-primary hover:text-primary dark:hover:text-primary transition-all hover:-translate-y-0.5" href="#">
+                        Recursos
+                    </a>
+                    <a class="inline-flex items-center px-4 py-2 rounded-full bg-white dark:bg-[#332F3E] text-gray-700 dark:text-gray-200 border border-gray-200 dark:border-gray-700 text-sm font-medium hover:border-primary hover:text-primary dark:hover:text-primary transition-all hover:-translate-y-0.5" href="#">
+                        Mujeres supervivientes
+                    </a>
+                </div>
+            </section>
+            <section class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-16">
+                <div class="relative overflow-hidden rounded-2xl bg-[#2E263D] group cursor-pointer shadow-xl">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 opacity-60" data-alt="Elderly hands holding young hands in a caring gesture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBIq3dtIuX3SRx6WTMH0QMyhKdIksVHWiVbjM7BLhbrvHDQVH3VQOMzIgvnXGMBS43IGXlEwOb20t72joRk3J79jrCXut2NmDrjIpNhAArLFw0cxgPqIx1k1lEl9P5LMp-eSp8B-rTSSCZDUuBwqSmSml9B9ChpAnHAsPIVzVk2TZBIF-mVqCx8WAjNeZiPk_IVKmC1JO5cqy1nM5KKod6wCaz3_oksQ5agH5uxbQUDQWkWvk7N9p6wDJK6G4IvvZuUsMCy9tMDlKY');"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="relative p-6 md:p-10 lg:p-12 flex flex-col justify-end min-h-[400px] lg:min-h-[500px]">
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="px-3 py-1 rounded-md bg-primary/90 text-white text-xs font-bold uppercase tracking-wider backdrop-blur-sm">Destacado</span>
+                            <span class="text-gray-300 text-sm font-medium flex items-center gap-1">
+                                <span class="material-symbols-outlined text-[16px]">calendar_today</span>
+                                15 Oct, 2023
+                            </span>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight max-w-4xl">
+                            Guía completa de la Ley de Dependencia en Andalucía: Pasos y Requisitos
+                        </h2>
+                        <p class="text-gray-200 text-lg mb-6 max-w-2xl line-clamp-2 md:line-clamp-none">
+                            Todo lo que necesitas saber para solicitar las ayudas a la dependencia en 2023. Documentación, plazos y consejos para agilizar el trámite en la Junta de Andalucía.
+                        </p>
+                        <div>
+                            <button class="inline-flex items-center gap-2 bg-white text-gray-900 hover:bg-gray-100 font-bold py-3 px-6 rounded-lg transition-colors">
+                                Leer artículo completo
+                                <span class="material-symbols-outlined text-sm font-bold">arrow_forward</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mb-20">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="text-2xl font-bold text-[#2D2A32] dark:text-white flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">feed</span>
+                        Últimas Publicaciones
+                    </h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="flex flex-col bg-white dark:bg-[#25222E] rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group border border-gray-100 dark:border-gray-800">
+                        <div class="relative h-56 overflow-hidden">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Caregiver helping an elderly woman walk outdoors" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALrXGBlAJxw0XIZZNMwOzIDY6X8f4PLrm0mVyCvmccdGQt9EVg-CCvLrvt61r0uldccGZ7i0F-OxFY4xPjDZoXVBgKicNekPut06TItqR0TPJ8-CpTWoNuRzAUM24yvE2GsRZKB8ZjnWscGbLrdGqoimDiovZpgAs0GhjMfPMOFPoFcFWxB207CUhy60SFhj4KSXwsDxNQsFwhIohM9JfUTyfbGsv-VVNfvOBdAD4FKb1UCQwZvf4mdQH5cc38Y1MlDCiPnqz6CVc');"></div>
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 rounded bg-white/90 dark:bg-[#2E263D]/90 text-primary text-xs font-bold uppercase tracking-wide backdrop-blur-sm">Cuidados</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mb-3">
+                                <span class="material-symbols-outlined text-[14px]">schedule</span>
+                                12 Oct, 2023
+                                <span>•</span>
+                                <span>5 min lectura</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-[#2D2A32] dark:text-white mb-3 group-hover:text-primary transition-colors">
+                                Prevención de caídas en el hogar para mayores
+                            </h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
+                                Consejos prácticos para adaptar la vivienda y garantizar la seguridad de nuestros mayores. Pequeños cambios que evitan grandes accidentes.
+                            </p>
+                            <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                                <a class="inline-flex items-center text-sm font-bold text-primary hover:underline" href="#">
+                                    Leer más
+                                    <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="flex flex-col bg-white dark:bg-[#25222E] rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group border border-gray-100 dark:border-gray-800">
+                        <div class="relative h-56 overflow-hidden">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Healthy fresh vegetables and fruits on a table" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQOQZmEoXBOlVPCW_Z64meZ7P9KtY4HJ1x0ZUwyhFZ808f2oK6AYQsHJZ3Gx-Jtbsg3Qiyq4j9etaBYr6nzoGExCiucrsZt-5ecTT5IbseXNeTydWQ4-Vkl0P4QiektpN_Opb-oYkrK0lSoo6siF6IRNAEehkwhLCv82K2O1pz5B2RwoIrBqeXUEjaanwz0mkDBon04Wr1_BXYi7HY69F4n9l3SYV_aBWRJK1PnJfp5l9qNiYy-9suF7bbzCQq29EWFxsP6gvfklE');"></div>
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 rounded bg-white/90 dark:bg-[#2E263D]/90 text-primary text-xs font-bold uppercase tracking-wide backdrop-blur-sm">Salud</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mb-3">
+                                <span class="material-symbols-outlined text-[14px]">schedule</span>
+                                08 Oct, 2023
+                                <span>•</span>
+                                <span>4 min lectura</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-[#2D2A32] dark:text-white mb-3 group-hover:text-primary transition-colors">
+                                Nutrición esencial en la tercera edad
+                            </h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
+                                ¿Qué alimentos no deben faltar en la dieta de un adulto mayor? Descubre cómo mejorar la calidad de vida a través de una alimentación equilibrada.
+                            </p>
+                            <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                                <a class="inline-flex items-center text-sm font-bold text-primary hover:underline" href="#">
+                                    Leer más
+                                    <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="flex flex-col bg-white dark:bg-[#25222E] rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group border border-gray-100 dark:border-gray-800">
+                        <div class="relative h-56 overflow-hidden">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Group of diverse women talking and supporting each other" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQORqUIbjHV2HGKB1PPwgAko5Km0mnzJiHiq2H1Go_IYfsN3rI3ZGnl7sswtRbW4quCbl4MO-LwNzbyPq77oOcRVOpmVIAVKkZsyCjtqiW7dFpAMaMJlwrHFKX5JpNPCsOkXdUoEnIuEqlTt3g5xdWk00D7-DzLnAGsf8zsB2SwxfH-jMunRkrinbFU4fJ-IDDyJATKqYLeXCd4tRM3i9JLOMU4eWuAp0pL_WAX_3O4GKgZjY5fnjo9PrrtQRtejPQK4PlLfypsgQ');"></div>
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 rounded bg-white/90 dark:bg-[#2E263D]/90 text-primary text-xs font-bold uppercase tracking-wide backdrop-blur-sm">Mujeres supervivientes</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mb-3">
+                                <span class="material-symbols-outlined text-[14px]">schedule</span>
+                                05 Oct, 2023
+                                <span>•</span>
+                                <span>7 min lectura</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-[#2D2A32] dark:text-white mb-3 group-hover:text-primary transition-colors">
+                                Recursos de apoyo y empoderamiento
+                            </h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
+                                Una recopilación de asociaciones y programas en Andalucía dedicados a ofrecer soporte psicológico y laboral para mujeres valientes.
+                            </p>
+                            <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                                <a class="inline-flex items-center text-sm font-bold text-primary hover:underline" href="#">
+                                    Leer más
+                                    <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="flex flex-col bg-white dark:bg-[#25222E] rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group border border-gray-100 dark:border-gray-800">
+                        <div class="relative h-56 overflow-hidden">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Detailed view of a contract being signed with a pen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAU1wDwJi5h8hPe5b4sFYQg8_56WfLwGLdlb_isHaBsRsZ3qv7s7AL1YvTkd8b_MOD2oiiPt-ADj5Um68k0zRPXqtgNtaHHPkGxvQHfak432CIleN7pC6coAKqeTU_5GEnRQJXC8X_EH7MnVnobivmNI0K_3mbHt3Wz4n__dLIiPe9GwJ-u1JchVv5mlP4EdKJhH-r2CdFq8L4acDDSQDME4Uovu3JR_-vnrFoV92KDkegWjharVtN3vlYc1rl8xNb9L6dMnXMkbWg');"></div>
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 rounded bg-white/90 dark:bg-[#2E263D]/90 text-primary text-xs font-bold uppercase tracking-wide backdrop-blur-sm">Recursos</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mb-3">
+                                <span class="material-symbols-outlined text-[14px]">schedule</span>
+                                01 Oct, 2023
+                                <span>•</span>
+                                <span>6 min lectura</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-[#2D2A32] dark:text-white mb-3 group-hover:text-primary transition-colors">
+                                Contratar a un cuidador: Aspectos legales
+                            </h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
+                                Guía para familias: contratos, seguridad social y derechos laborales al contratar asistencia domiciliaria en España.
+                            </p>
+                            <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                                <a class="inline-flex items-center text-sm font-bold text-primary hover:underline" href="#">
+                                    Leer más
+                                    <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="flex flex-col bg-white dark:bg-[#25222E] rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group border border-gray-100 dark:border-gray-800">
+                        <div class="relative h-56 overflow-hidden">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Doctor holding patients hand comforting them" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAIBVX85dmHHQRBewFH79QWSj9pSoRRZ_ix7UIVTPZZ1EYTcSwgvDFs7pVEadkMjRBSD_W1AMcia2KdtKRQXE89R06Z_zi-S_LubbYvUSMIn5HaMtLXM5_scb3RUFnRlwtIA-4_DLSJ4Tk3gLCzB2nyJm0CTcJAJKPH8XfvB5xOp5LkUsfudDOsZ7Ney6m41LvEYhY9Evd7Amoo6Gu-WRjF4Vo4BpuUBDvVROcLBIiGePdq-O6crCTrRr3rWvu25IlXS-ZSN1gv0jo');"></div>
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 rounded bg-white/90 dark:bg-[#2E263D]/90 text-primary text-xs font-bold uppercase tracking-wide backdrop-blur-sm">Dependencia</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mb-3">
+                                <span class="material-symbols-outlined text-[14px]">schedule</span>
+                                28 Sep, 2023
+                                <span>•</span>
+                                <span>5 min lectura</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-[#2D2A32] dark:text-white mb-3 group-hover:text-primary transition-colors">
+                                Alzheimer: Primeros signos y cómo actuar
+                            </h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
+                                Detectar el Alzheimer a tiempo es clave. Te explicamos los síntomas iniciales y los pasos a seguir para obtener un diagnóstico.
+                            </p>
+                            <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                                <a class="inline-flex items-center text-sm font-bold text-primary hover:underline" href="#">
+                                    Leer más
+                                    <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="flex flex-col bg-white dark:bg-[#25222E] rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group border border-gray-100 dark:border-gray-800">
+                        <div class="relative h-56 overflow-hidden">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Wheelchair accessible ramp entrance to a building" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAquX-bbdqriRfAbivL1LgntnNhUKn5VwxBNywjW1KecLJIlpLzAJFkGOaldgI6mMd3CFpH55ZMvTQIenBGO7Yg32lwxAiHmpnGwIOChLFXs5ZW8jtHAxchlJtJiyf-FzRKRmTNNObWhWS9L2TWbyoWi-YWvxhQXZ9_UJJ9vtF9YLpC6tJ2nUPPWP_nbzIkRUWqB6NdPii1qWVp6w453wb1Oak9_e0Yalxy0ScokKQ4WWFPS_MV59X8Kj_0M-EkNJ506N3vHiH31n0');"></div>
+                            <div class="absolute top-4 left-4">
+                                <span class="px-3 py-1 rounded bg-white/90 dark:bg-[#2E263D]/90 text-primary text-xs font-bold uppercase tracking-wide backdrop-blur-sm">Recursos</span>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mb-3">
+                                <span class="material-symbols-outlined text-[14px]">schedule</span>
+                                22 Sep, 2023
+                                <span>•</span>
+                                <span>4 min lectura</span>
+                            </div>
+                            <h4 class="text-xl font-bold text-[#2D2A32] dark:text-white mb-3 group-hover:text-primary transition-colors">
+                                Ayudas para la adaptación de viviendas
+                            </h4>
+                            <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
+                                Conoce las subvenciones disponibles en tu comunidad para instalar rampas, platos de ducha y otros elementos de accesibilidad.
+                            </p>
+                            <div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+                                <a class="inline-flex items-center text-sm font-bold text-primary hover:underline" href="#">
+                                    Leer más
+                                    <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div class="mt-16 flex justify-center">
+                    <nav class="flex items-center gap-2">
+                        <button class="size-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-[#332F3E] text-gray-600 dark:text-gray-400">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button class="size-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold shadow-lg shadow-primary/30">1</button>
+                        <button class="size-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-[#332F3E] text-gray-600 dark:text-gray-400 font-medium">2</button>
+                        <button class="size-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-[#332F3E] text-gray-600 dark:text-gray-400 font-medium">3</button>
+                        <span class="text-gray-400 px-2">...</span>
+                        <button class="size-10 flex items-center justify-center rounded-lg border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-[#332F3E] text-gray-600 dark:text-gray-400">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </nav>
+                </div>
+            </section>
+            <section class="bg-[#25222E] dark:bg-black py-16 px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="inline-flex items-center justify-center p-3 bg-primary/20 rounded-full text-primary mb-6">
+                        <span class="material-symbols-outlined text-3xl">mail</span>
+                    </div>
+                    <h2 class="text-3xl font-bold text-white mb-4">No te pierdas ninguna actualización</h2>
+                    <p class="text-gray-400 mb-8 max-w-xl mx-auto">Recibe nuestros mejores consejos sobre cuidados y noticias del sector directamente en tu bandeja de entrada. Sin spam, solo contenido útil.</p>
+                    <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                        <input class="flex-1 px-5 py-3 rounded-lg bg-white/10 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white/20 transition-all" placeholder="Tu correo electrónico" type="email">
+                        <button class="px-8 py-3 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg transition-colors shadow-lg shadow-primary/20" type="button">
+                            Suscribirme
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-white border-t border-gray-200 pt-16 pb-8 dark:bg-[#18171b] dark:border-gray-800" id="contacto">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-2 text-primary">
+                            <span class="material-symbols-outlined text-3xl">medical_services</span>
+                            <span class="text-xl font-bold text-text-main dark:text-white">Auxiplus</span>
+                        </div>
+                        <p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
+                            Comprometidos con el bienestar de las familias en Andalucía. Cuidamos de los tuyos como si fueran los nuestros.
+                        </p>
+                        <div class="flex gap-4 pt-2">
+                            <a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white" href="#">
+                                <span class="sr-only">Facebook</span>
+                                <svg
+                                    aria-hidden="true"
+                                    class="h-6 w-6"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                            <a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white" href="#">
+                                <span class="sr-only">Instagram</span>
+                                <svg
+                                    aria-hidden="true"
+                                    class="h-6 w-6"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.373c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Explora</h3>
+                        <ul class="flex flex-col gap-3">
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">Sobre Nosotros</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">Cobertura en Andalucía</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Blog y Recursos</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-red-500 hover:text-red-600 font-semibold" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">Asistencia Urgente 24h</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Blog</h3>
+                        <ul class="flex flex-col gap-3">
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Cuidados</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Dependencia</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Recursos</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Mujeres supervivientes</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Contacto</h3>
+                        <ul class="flex flex-col gap-3">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
+                                <span class="text-sm text-text-muted dark:text-gray-400">
+                                    Av. Gran Capitán 23, 14008
+                                    <br>
+                                    Córdoba, España
+                                </span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm">call</span>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="tel:+34900000000">+34 900 000 000</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm">mail</span>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="mailto:info@auxiplus.com">info@auxiplus.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-12 border-t border-gray-100 pt-8 dark:border-gray-800">
+                    <p class="text-center text-xs text-text-muted dark:text-gray-500">
+                        © 2026 Auxiplus Asistencia a Domicilio. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+        </script>
+    </body>
+</html>

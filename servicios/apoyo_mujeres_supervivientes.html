@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Apoyo Mujeres Supervivientes - Auxiplus</title>
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../dist/css/output.css">
+    </head>
+    <body class="bg-background-light dark:bg-background-dark text-text-main dark:text-background-light transition-colors duration-200">
+        <header class="sticky top-0 z-50 w-full border-b border-[#f2f2f3] bg-white/95 backdrop-blur-sm dark:bg-[#18171b]/95 dark:border-gray-800">
+            <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+                <!-- Logo -->
+                <a href="https://juanjosejurado.github.io/auxiplus/" class="flex items-center gap-3">
+                    <div class="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined text-3xl">medical_services</span>
+                    </div>
+                    <span class="text-xl font-bold tracking-tight text-text-main dark:text-white">Auxiplus</span>
+                </a>
+                <!-- NAV DESKTOP -->
+                <nav class="hidden lg:flex items-center gap-6" role="navigation" aria-label="Menú principal">
+                    <!-- Servicios -->
+                    <div class="relative group">
+                        <a href="https://juanjosejurado.github.io/auxiplus/servicios" class="flex items-center gap-1 text-sm font-medium text-text-main hover:text-primary dark:text-gray-300 dark:hover:text-white">
+                            Servicios
+                            <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+                        </a>
+                        <div class="absolute top-full left-0 mt-2 w-64 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#18171b] shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                            <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_mayores">Cuidado de Mayores</a>
+                            <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_dependientes">Asistencia a Dependientes</a>
+                            <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/apoyo_mujeres_supervivientes">Apoyo a Mujeres Supervivientes</a>
+                            <a class="block px-4 py-2 text-sm font-semibold text-primary bg-primary/5 rounded-lg" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">Asistencia Urgente 24h</a>
+                        </div>
+                    </div>
+                    <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">Nosotros</a>
+                    <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/calculadora_de_precios">Calculadora</a>
+                    <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">Cobertura</a>
+                    <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/blog">Blog</a>
+                    <a class="text-sm font-medium hover:text-primary" href="#faq">Preguntas</a>
+                    <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/contacto">Contacto</a>
+                </nav>
+                <!-- CTA + MOBILE -->
+                <div class="flex items-center gap-3">
+                    <a href="tel:+34900123456" class="hidden sm:flex items-center gap-2 rounded-lg h-10 px-5 bg-primary hover:bg-primary-dark text-white text-sm font-bold transition shadow-sm focus:ring-2 ring-primary">
+                        <span class="material-symbols-outlined text-[18px]">call</span>
+                        Llámanos
+                    </a>
+                    <button id="mobile-menu-btn" class="flex lg:hidden p-2 text-gray-600 dark:text-gray-300" aria-label="Abrir menú">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+            <!-- MENU MOBILE -->
+            <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-[#18171b]">
+                <nav class="px-4 py-6 space-y-6">
+                    <!-- Servicios -->
+                    <details class="group">
+                        <summary class="flex items-center justify-between h-12 px-2 text-sm font-semibold rounded-lg cursor-pointer active:bg-gray-100 dark:active:bg-gray-800">
+                            Servicios
+                            <span class="material-symbols-outlined transition-transform group-open:rotate-180">
+                                expand_more
+                            </span>
+                        </summary>
+                        <div class="mt-4 space-y-2 pl-4">
+                            <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_mayores">
+                                Cuidado de Mayores
+                            </a>
+                            <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_dependientes">
+                                Asistencia a Dependientes
+                            </a>
+                            <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/apoyo_mujeres_supervivientes">
+                                Apoyo a Mujeres Supervivientes
+                            </a>
+                            <a class="flex items-center h-11 px-3 rounded-lg text-sm font-semibold text-primary bg-primary/10" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">
+                                Asistencia Urgente 24h
+                            </a>
+                        </div>
+                    </details>
+                    <!-- Enlaces principales -->
+                    <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">
+                        Nosotros
+                    </a>
+                    <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/calculadora_de_precios">
+                        Calculadora
+                    </a>
+                    <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">
+                        Cobertura
+                    </a>
+                    <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/blog">
+                        Blog
+                    </a>
+                    <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="#faq">
+                        Preguntas
+                    </a>
+                    <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/contacto">
+                        Contacto
+                    </a>
+                    <!-- CTA PRINCIPAL MOBILE -->
+                    <a href="tel:+34900123456" class="mt-6 flex items-center justify-center gap-2 h-12 rounded-lg bg-primary text-white text-sm font-bold shadow-md active:bg-primary/90">
+                        <span class="material-symbols-outlined text-[18px]">call</span>
+                        Llámanos ahora
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <section class="relative w-full overflow-hidden">
+  <div class="container mx-auto px-4 md:px-6 py-12 md:py-20 lg:py-24">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <!-- Texto -->
+      <div class="flex flex-col gap-6 md:gap-8 max-w-2xl">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 w-fit">
+          <span class="material-symbols-outlined text-primary text-sm">favorite</span>
+          <span class="text-xs font-bold text-primary uppercase tracking-wider">Apoyo Integral</span>
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-text-main dark:text-white">
+          Apoyo a mujeres supervivientes en
+          <span class="text-primary">Andalucía</span>
+        </h1>
+        <p class="text-lg md:text-xl text-text-muted dark:text-gray-300 font-normal leading-relaxed">
+          Recupera tu autonomía con ayuda profesional y humana en tu propio hogar. Entendemos tu situación y te ofrecemos un espacio seguro para reorganizar tu vida.
+        </p>
+        <div class="flex flex-wrap gap-4 mt-2">
+          <button class="flex items-center justify-center gap-2 h-12 px-8 rounded-xl bg-primary hover:bg-primary-dark text-white font-bold text-base shadow-lg shadow-primary/25 transition-all w-full sm:w-auto">
+            <span class="material-symbols-outlined">call</span>
+            <span>Llamar Ahora</span>
+          </button>
+          <button class="flex items-center justify-center gap-2 h-12 px-8 rounded-xl bg-white dark:bg-gray-800 border-2 border-[#E8E6EA] dark:border-gray-700 hover:border-primary/30 text-text-main dark:text-white font-bold text-base transition-all w-full sm:w-auto">
+            <span class="material-symbols-outlined text-green-500">chat</span>
+            <span>WhatsApp</span>
+          </button>
+        </div>
+        <div class="flex items-center gap-2 text-sm text-text-muted dark:text-gray-400 mt-2">
+          <span class="material-symbols-outlined text-primary text-lg">location_on</span>
+          <span>Cobertura prioritaria en Córdoba y toda Andalucía</span>
+        </div>
+      </div>
+
+      <!-- Imagen -->
+      <div class="relative w-full h-[300px] sm:h-[400px] lg:h-[500px]">
+        <!-- Fondo rotado -->
+        <div class="absolute inset-0 bg-primary/10 rounded-2xl transform rotate-3 scale-95 origin-bottom-right"></div>
+
+        <!-- Contenedor de imagen -->
+        <div class="relative w-full h-full lg:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-gray-200">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10"></div>
+          <img
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZOZ0tuv-GQwuKIQ3YKfFwyRNBcpfsXcuFmSDPL6R8Uo7aQCfljbjLo29kvSs-BJgAMfggDolrw9Z5Lwg6bngQqSyKB2UGmMbiGIkn39I1SoUD-pvUu1wKYkWjLgiYkNE5dKaUVu5k8pFhjdg4BYb63f9LxitPRcW0Uudbc3ZXhe6O98k4HMQu4vhH7yKxEVr02R6ORZUB3bI5dLSySlwWKh9EcMM_n39QnyRkHlwigVvWLL-YnoyqYp8VyMIf9JbinO9IqiK4Q9k"
+            alt="Cuidadora ofreciendo apoyo emocional a una mujer en el hogar, ambiente cálido y seguro"
+            class="w-full h-full object-cover"
+          >
+          <!-- Overlay inferior -->
+          <div class="absolute bottom-6 left-6 z-20 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm p-4 rounded-xl shadow-lg max-w-full sm:max-w-xs">
+            <div class="flex items-center gap-3">
+              <div class="bg-green-100 p-2 rounded-full text-green-600">
+                <span class="material-symbols-outlined">verified_user</span>
+              </div>
+              <div>
+                <p class="font-bold text-sm dark:text-white">Personal Verificado</p>
+                <p class="text-xs text-gray-500 dark:text-gray-400">100% Confidencialidad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="py-16 bg-white dark:bg-gray-900">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl font-bold tracking-tight mb-4 dark:text-white">Nuestros Valores Fundamentales</h2>
+                    <p class="text-lg text-text-muted dark:text-gray-400">Asistencia basada en la confianza, la seguridad y el respeto mutuo.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="flex flex-col p-6 rounded-2xl bg-background-light dark:bg-gray-800 border border-[#E8E6EA] dark:border-gray-700 hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
+                            <span class="material-symbols-outlined text-3xl">shield_lock</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">Confidencialidad Total</h3>
+                        <p class="text-text-muted dark:text-gray-400">Respetamos tu privacidad por encima de todo. Tus datos y situación están protegidos.</p>
+                    </div>
+                    <div class="flex flex-col p-6 rounded-2xl bg-background-light dark:bg-gray-800 border border-[#E8E6EA] dark:border-gray-700 hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
+                            <span class="material-symbols-outlined text-3xl">badge</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">Profesionalismo Certificado</h3>
+                        <p class="text-text-muted dark:text-gray-400">Equipo cualificado y formado específicamente para situaciones sensibles y de apoyo.</p>
+                    </div>
+                    <div class="flex flex-col p-6 rounded-2xl bg-background-light dark:bg-gray-800 border border-[#E8E6EA] dark:border-gray-700 hover:shadow-lg transition-shadow">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-primary/10 text-primary mb-4">
+                            <span class="material-symbols-outlined text-3xl">diversity_1</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 dark:text-white">Cercanía y Empatía</h3>
+                        <p class="text-text-muted dark:text-gray-400">Más que un servicio, ofrecemos un trato humano que comprende tu proceso personal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-16 md:py-24 bg-background-light dark:bg-background-dark">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+                    <div class="max-w-2xl">
+                        <h2 class="text-3xl md:text-4xl font-black tracking-tight mb-4 dark:text-white">Servicios de Asistencia Integral</h2>
+                        <p class="text-lg text-text-muted dark:text-gray-400">Adaptamos nuestros cuidados a tus necesidades específicas para facilitar tu día a día mientras recuperas tu estabilidad.</p>
+                    </div>
+                    <button class="hidden md:flex items-center gap-2 text-primary font-bold hover:text-primary-dark transition-colors">
+                        Ver todos los servicios
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-8 shadow-sm hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <span class="material-symbols-outlined text-9xl text-primary">volunteer_activism</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                                <span class="material-symbols-outlined text-3xl">volunteer_activism</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 dark:text-white">Acompañamiento</h3>
+                            <p class="text-text-muted dark:text-gray-400 mb-6">Asistencia personal para acudir a citas médicas, gestiones administrativas o judiciales con total discreción.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
+                                    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                    Citas médicas
+                                </li>
+                                <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
+                                    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                    Trámites legales
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-8 shadow-sm hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <span class="material-symbols-outlined text-9xl text-primary">house</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                                <span class="material-symbols-outlined text-3xl">house</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 dark:text-white">Ayuda en el Hogar</h3>
+                            <p class="text-text-muted dark:text-gray-400 mb-6">Apoyo práctico con la limpieza, cocina y tareas domésticas para que puedas centrarte en ti misma.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
+                                    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                    Limpieza general
+                                </li>
+                                <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
+                                    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                    Compras y recados
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-8 shadow-sm hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <span class="material-symbols-outlined text-9xl text-primary">psychology</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6">
+                                <span class="material-symbols-outlined text-3xl">psychology</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 dark:text-white">Apoyo Emocional</h3>
+                            <p class="text-text-muted dark:text-gray-400 mb-6">Escucha activa y compañía empática para combatir la soledad y fortalecer tu autoestima.</p>
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
+                                    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                    Escucha activa
+                                </li>
+                                <li class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
+                                    <span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                                    Compañía
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-16 md:py-24 bg-white dark:bg-gray-900">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+                    <div class="w-full lg:w-1/2">
+                        <div class="relative rounded-2xl overflow-hidden aspect-video shadow-xl mb-8">
+                            <img
+                                alt="Grupo diverso de mujeres conversando y sonriendo en un entorno seguro y luminoso"
+                                class="w-full h-full object-cover"
+                                data-alt="Group of diverse women chatting and smiling in a safe and bright environment"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhbCQjY3SoR5i7Wjvq1FNdSS-NnjQ6W4x61XK7kM20LHOxvBxvlcOE54SBvMhhMZEkowlaPRV5wSDscLkKJPxg2MbBrmdFVK7isppbCLKMT9fUYFXBkbwp1Bx5h_FHQi7oXgKfUhwnRcJgwgftI3JhPQJmmK9KP5xW3qo6uHE8HLjknCAjM9I80zmchXcwH1FnbllWstgNR8K8R5xmsOT4Zp9C2fJuQr1OE-BExT1AwKMm93qGEGq4Xk4spqx2WouYY3XLsJcCl6w"
+                            >
+                            <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+                        </div>
+                        <h2 class="text-3xl font-bold mb-4 dark:text-white">¿A quién va dirigido?</h2>
+                        <p class="text-lg text-text-muted dark:text-gray-400 mb-6">
+                            Este servicio está diseñado especialmente para mujeres que han superado situaciones difíciles y necesitan un apoyo extra para reorganizar su vida y hogar en Córdoba y Andalucía.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">check_box</span>
+                                <span class="text-text-main dark:text-gray-300">Mujeres en proceso de recuperación de autonomía.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">check_box</span>
+                                <span class="text-text-main dark:text-gray-300">Familias monoparentales que necesitan conciliación.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-primary mt-1">check_box</span>
+                                <span class="text-text-main dark:text-gray-300">Personas que buscan un entorno de confianza y seguridad.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full lg:w-1/2 bg-background-light dark:bg-gray-800 p-8 md:p-10 rounded-3xl border border-[#E8E6EA] dark:border-gray-700">
+                        <h3 class="text-2xl font-bold mb-8 dark:text-white">¿Cómo funciona nuestro servicio?</h3>
+                        <div class="space-y-8 relative">
+                            <div class="absolute left-[19px] top-4 bottom-4 w-0.5 bg-gray-200 dark:bg-gray-700"></div>
+                            <div class="relative flex gap-6">
+                                <div class="relative z-10 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-primary/30 shrink-0">1</div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-text-main dark:text-white mb-2">Contacto Inicial</h4>
+                                    <p class="text-text-muted dark:text-gray-400 text-sm">Llámanos o escríbenos por WhatsApp. Te atenderemos con total discreción para entender tus necesidades.</p>
+                                </div>
+                            </div>
+                            <div class="relative flex gap-6">
+                                <div class="relative z-10 w-10 h-10 rounded-full bg-white dark:bg-gray-700 border-2 border-primary text-primary flex items-center justify-center font-bold text-lg shrink-0">2</div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-text-main dark:text-white mb-2">Valoración Personal</h4>
+                                    <p class="text-text-muted dark:text-gray-400 text-sm">Diseñamos un plan de cuidados a medida, seleccionando a la profesional que mejor encaje contigo.</p>
+                                </div>
+                            </div>
+                            <div class="relative flex gap-6">
+                                <div class="relative z-10 w-10 h-10 rounded-full bg-white dark:bg-gray-700 border-2 border-gray-300 dark:border-gray-600 text-gray-500 flex items-center justify-center font-bold text-lg shrink-0">3</div>
+                                <div>
+                                    <h4 class="text-xl font-bold text-text-main dark:text-white mb-2">Inicio del Servicio</h4>
+                                    <p class="text-text-muted dark:text-gray-400 text-sm">Comenzamos la asistencia en tu hogar, con seguimiento continuo para asegurar tu bienestar.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 pt-6 border-t border-gray-200 dark:border-gray-700">
+                            <button class="w-full h-12 rounded-xl bg-primary hover:bg-primary-dark text-white font-bold transition-all shadow-md">
+                                Solicitar Información
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative py-20 bg-primary text-white overflow-hidden">
+            <!-- Fondo decorativo -->
+            <div class="absolute inset-0 opacity-10" aria-hidden="true" style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 24px 24px;"></div>
+            <div class="relative z-10 max-w-6xl mx-auto px-4">
+                <!-- Texto -->
+                <div class="text-center mb-12">
+                    <span class="material-symbols-outlined text-5xl mb-4 text-white/80">map</span>
+                    <h2 class="text-3xl sm:text-4xl font-black mb-4">
+                        Nuestra Zona de Cobertura
+                    </h2>
+                    <p class="text-xl sm:text-2xl font-medium text-white/90">
+                        Servicio de ayuda a domicilio en
+                        <span class="font-bold underline decoration-white/30 underline-offset-4">
+                            Córdoba capital
+                        </span>
+                        y toda la
+                        <span class="font-bold underline decoration-white/30 underline-offset-4">
+                            provincia
+                        </span>
+                    </p>
+                </div>
+                <!-- Mapa -->
+                <div class="grid lg:grid-cols-2 gap-10 items-center">
+                    <!-- MAPA REAL -->
+                    <div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border border-white/20 bg-white" role="region" aria-label="Mapa de cobertura en Córdoba y provincia">
+                        <iframe
+                            title="Mapa de cobertura Auxiplus"
+                            src="https://www.google.com/maps?q=Córdoba,+España&output=embed"
+                            class="absolute inset-0 w-full h-full border-0"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                    <!-- ZONAS -->
+                    <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                        <p class="text-lg font-semibold mb-4">
+                            Llegamos a donde nos necesites:
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Córdoba Capital</span>
+                            <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Lucena</span>
+                            <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Puente Genil</span>
+                            <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Montilla</span>
+                            <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Priego de Córdoba</span>
+                            <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Palma del Río</span>
+                            <span class="px-4 py-2 bg-white/20 rounded-full text-sm font-semibold">Cabra</span>
+                            <span class="px-4 py-2 bg-white/10 rounded-full text-sm italic text-white/70">
+                                + más municipios
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-primary text-white">
+            <div class="container mx-auto px-4 md:px-6 text-center">
+                <h2 class="text-3xl md:text-5xl font-black mb-6 tracking-tight">No estás sola en este camino</h2>
+                <p class="text-xl md:text-2xl font-medium mb-10 opacity-90 max-w-3xl mx-auto">
+                    Hablemos sin compromiso. Estamos aquí para escucharte y ayudarte a construir tu nuevo comienzo.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button class="bg-white text-primary hover:bg-gray-50 h-14 px-8 rounded-xl font-bold text-lg transition-all shadow-xl flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined">call</span>
+                        900 123 456
+                    </button>
+                    <button class="bg-transparent border-2 border-white hover:bg-white/10 h-14 px-8 rounded-xl font-bold text-lg transition-all flex items-center justify-center gap-2">
+                        <span class="material-symbols-outlined">chat</span>
+                        Contactar por WhatsApp
+                    </button>
+                </div>
+            </div>
+        </section>
+        <footer class="bg-white border-t border-gray-200 pt-16 pb-8 dark:bg-[#18171b] dark:border-gray-800" id="contacto">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-2 text-primary">
+                            <span class="material-symbols-outlined text-3xl">medical_services</span>
+                            <span class="text-xl font-bold text-text-main dark:text-white">Auxiplus</span>
+                        </div>
+                        <p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
+                            Comprometidos con el bienestar de las familias en Andalucía. Cuidamos de los tuyos como si fueran los nuestros.
+                        </p>
+                        <div class="flex gap-4 pt-2">
+                            <a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white" href="#">
+                                <span class="sr-only">Facebook</span>
+                                <svg
+                                    aria-hidden="true"
+                                    class="h-6 w-6"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                            <a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white" href="#">
+                                <span class="sr-only">Instagram</span>
+                                <svg
+                                    aria-hidden="true"
+                                    class="h-6 w-6"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.373c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Explora</h3>
+                        <ul class="flex flex-col gap-3">
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">Sobre Nosotros</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">Cobertura en Andalucía</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Blog y Recursos</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-red-500 hover:text-red-600 font-semibold" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">Asistencia Urgente 24h</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Blog</h3>
+                        <ul class="flex flex-col gap-3">
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Cuidados</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Dependencia</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Recursos</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Mujeres supervivientes</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Contacto</h3>
+                        <ul class="flex flex-col gap-3">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
+                                <span class="text-sm text-text-muted dark:text-gray-400">
+                                    Av. Gran Capitán 23, 14008
+                                    <br>
+                                    Córdoba, España
+                                </span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm">call</span>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="tel:+34900000000">+34 900 000 000</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm">mail</span>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="mailto:info@auxiplus.com">info@auxiplus.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-12 border-t border-gray-100 pt-8 dark:border-gray-800">
+                    <p class="text-center text-xs text-text-muted dark:text-gray-500">
+                        © 2026 Auxiplus Asistencia a Domicilio. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <a aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 transition-transform duration-200 group" href="#">
+            <svg class="w-8 h-8 fill-current" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path>
+            </svg>
+            <span class="absolute right-16 px-3 py-1 bg-white text-gray-800 text-sm font-bold rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block">
+                ¿Hablamos?
+            </span>
+        </a>
+        <script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+        </script>
+    </body>
+</html>

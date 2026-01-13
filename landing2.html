@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auxiplus - Cuidado de Mayores en Córdoba</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6b5b95",
+                        "background-light": "#f7f6f7",
+                        "background-dark": "#18171b",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#141315] dark:text-white overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-40 w-full bg-white dark:bg-[#1e1e1e] border-b border-[#f2f2f3] dark:border-[#333]">
+<div class="px-4 lg:px-10 py-3 flex items-center justify-between mx-auto max-w-7xl">
+<div class="flex items-center gap-4">
+<div class="text-primary size-8">
+<span class="material-symbols-outlined text-4xl">medical_services</span>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] text-[#141315] dark:text-white">Auxiplus</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#servicios">Servicios</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#como-funciona">Cómo Funciona</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#cobertura">Cobertura</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="hidden sm:flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-primary/90 transition-colors text-white text-sm font-bold" href="#contacto">
+<span class="truncate">Llamar Ahora</span>
+</a>
+<button class="lg:hidden text-[#141315] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- HeroSection -->
+<div class="relative w-full">
+<div class="relative flex min-h-[600px] flex-col justify-end overflow-hidden bg-cover bg-center px-4 pb-12 pt-20 sm:px-10 lg:px-20" data-alt="Caregiver smiling warmly while holding hands with an elderly woman in a home setting" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvkUo74UelbTMRsfKqggqMhM3FX1bCArct6clVfbkW1_5z0_mYIdVsw7XeWVRKKGXZBSHdkxH3qRUR7uvepfXAMof0jGQECalrl7dU2rqxZ3TwqDH0fMybxJAiyV33c5oUCWD3NYhbUqIQNiduNSqQEjr6bZyjwl2i_JPRPaVxkplKksrG7b40bR32qk7JM2KU7t-wxQfP0R9eD7CAylyxERFOyRIKss-CiCtF9JsMhaF8oOzDviLl8AnuozFrNi-YqB0N8z3ZThY");'>
+<div class="max-w-3xl">
+<h1 class="text-white text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-6 drop-shadow-lg">
+                    Asistencia y Cuidado de Personas Mayores a Domicilio en Córdoba
+                </h1>
+<h2 class="text-white/90 text-lg sm:text-xl font-medium leading-relaxed mb-8 max-w-2xl drop-shadow-md">
+                    Envejece con dignidad en tu propio hogar. Profesionales de confianza para el cuidado experto y humano de tus seres queridos.
+                </h2>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-primary/90 text-white text-base font-bold transition-colors" href="#contacto">
+                        Solicitar Presupuesto Gratuito
+                    </a>
+<a class="flex items-center justify-center rounded-lg h-12 px-8 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white text-base font-bold transition-colors" href="#servicios">
+                        Ver Servicios
+                    </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Intro Text -->
+<section class="py-16 px-4 bg-white dark:bg-[#1e1e1e]">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="text-primary text-sm font-bold uppercase tracking-widest mb-3">Nuestra Misión</h2>
+<h3 class="text-3xl font-bold text-[#141315] dark:text-white mb-6">Cuidado humano y profesional en Córdoba</h3>
+<p class="text-lg text-[#736f7b] dark:text-gray-300 leading-relaxed">
+                En Auxiplus, entendemos que no hay lugar como el hogar. Nuestro objetivo es mejorar la calidad de vida de las personas mayores en toda la provincia de Córdoba, ofreciendo un servicio cercano, flexible y adaptado a cada necesidad, evitando el desarraigo de su entorno familiar.
+            </p>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-20 px-4 bg-background-light dark:bg-background-dark" id="servicios">
+<div class="max-w-7xl mx-auto">
+<div class="mb-12 text-center sm:text-left">
+<h2 class="text-3xl sm:text-4xl font-bold text-[#141315] dark:text-white mb-4">Nuestros Servicios Especializados</h2>
+<p class="text-lg text-[#736f7b] dark:text-gray-400 max-w-2xl">
+                    Cubrimos todas las necesidades asistenciales para garantizar el bienestar integral en el hogar.
+                </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Service 1 -->
+<div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#252525] p-6 hover:shadow-lg transition-shadow">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">medication</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-[#141315] dark:text-white mb-2">Control de Medicación</h3>
+<p class="text-[#736f7b] dark:text-gray-400 leading-relaxed">Supervisión rigurosa de la toma de medicamentos, control de recetas y seguimiento de pautas médicas.</p>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#252525] p-6 hover:shadow-lg transition-shadow">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">bathtub</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-[#141315] dark:text-white mb-2">Higiene Personal</h3>
+<p class="text-[#736f7b] dark:text-gray-400 leading-relaxed">Ayuda respetuosa en el aseo diario, ducha, vestido y cambio de absorbentes, manteniendo la dignidad.</p>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#252525] p-6 hover:shadow-lg transition-shadow">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">diversity_3</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-[#141315] dark:text-white mb-2">Acompañamiento</h3>
+<p class="text-[#736f7b] dark:text-gray-400 leading-relaxed">Combate la soledad con conversación, paseos, lectura y acompañamiento a citas médicas.</p>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#252525] p-6 hover:shadow-lg transition-shadow">
+<div class="size-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">accessible_forward</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-[#141315] dark:text-white mb-2">Ayuda a la Movilidad</h3>
+<p class="text-[#736f7b] dark:text-gray-400 leading-relaxed">Soporte físico profesional para levantarse, acostarse, transferencias y ejercicios de movilidad.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Who Is It For Section -->
+<section class="py-20 px-4 bg-primary/5 dark:bg-[#2a2438]">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+<div class="flex-1 space-y-8">
+<h2 class="text-3xl sm:text-4xl font-bold text-[#141315] dark:text-white">¿Para quién es nuestro servicio?</h2>
+<p class="text-lg text-[#736f7b] dark:text-gray-300">
+                    Adaptamos nuestra atención a las circunstancias de cada familia. Ya sea para una necesidad puntual o un cuidado a largo plazo.
+                </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h4 class="font-bold text-[#141315] dark:text-white">Mayores dependientes</h4>
+<p class="text-sm text-[#736f7b] dark:text-gray-400">Personas con Alzheimer, Parkinson o movilidad reducida que necesitan asistencia constante.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h4 class="font-bold text-[#141315] dark:text-white">Recuperación Post-hospitalaria</h4>
+<p class="text-sm text-[#736f7b] dark:text-gray-400">Apoyo temporal tras una operación o ingreso hospitalario hasta recuperar la autonomía.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<h4 class="font-bold text-[#141315] dark:text-white">Respiro Familiar</h4>
+<p class="text-sm text-[#736f7b] dark:text-gray-400">Apoyo para cuidadores principales que necesitan tiempo libre sabiendo que su familiar está en buenas manos.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="flex-1 w-full">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl h-[400px]" data-alt="Elderly man reading a book with a female caregiver in a bright living room">
+<img alt="Cuidado de mayores" class="object-cover w-full h-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFhdKjNf26e1gNO1c-A01K6hM9d1qTvdm7hN1zM509Wm_wTlMjgIAsRvX_TpIIYl-iNLKg94ZyjUK6Y47ZOM8NOL9AQIlkTPDwp9UtGfhRVN1ZLDY9OVMGjOu2Dsf1Cudvu2A550hl-6Z4vzbhr66NTfUgKNb0N3SkuRy1Jlqd09hilATkCrMdufKQGQT5joN1Fj0iP2fylUEpbpygJIheuZNQfkpuQI-eUtJbmf2zp9WPntqUgYIZDsEJCI8_E-EaJ0ycwZl56Gs"/>
+</div>
+</div>
+</div>
+</section>
+<!-- How We Work Section -->
+<section class="py-20 px-4 bg-white dark:bg-[#1e1e1e]" id="como-funciona">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-3xl sm:text-4xl font-bold text-[#141315] dark:text-white mb-4">Cómo trabajamos</h2>
+<p class="text-[#736f7b] dark:text-gray-400">Un proceso sencillo y transparente para tu tranquilidad.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+<!-- Line connector for desktop -->
+<div class="hidden md:block absolute top-12 left-[16%] right-[16%] h-0.5 bg-gray-200 dark:bg-gray-700 -z-10"></div>
+<!-- Step 1 -->
+<div class="flex flex-col items-center text-center gap-4">
+<div class="size-24 rounded-full bg-white dark:bg-[#1e1e1e] border-4 border-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary">phone_in_talk</span>
+</div>
+<h3 class="text-xl font-bold text-[#141315] dark:text-white">1. Contacto Inicial</h3>
+<p class="text-[#736f7b] dark:text-gray-400 px-4">Llámanos o escríbenos. Te escuchamos para entender tus necesidades inmediatas.</p>
+</div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center text-center gap-4">
+<div class="size-24 rounded-full bg-white dark:bg-[#1e1e1e] border-4 border-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary">assignment_add</span>
+</div>
+<h3 class="text-xl font-bold text-[#141315] dark:text-white">2. Valoración Gratuita</h3>
+<p class="text-[#736f7b] dark:text-gray-400 px-4">Evaluamos la situación y seleccionamos al cuidador ideal para tu caso.</p>
+</div>
+<!-- Step 3 -->
+<div class="flex flex-col items-center text-center gap-4">
+<div class="size-24 rounded-full bg-white dark:bg-[#1e1e1e] border-4 border-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary">handshake</span>
+</div>
+<h3 class="text-xl font-bold text-[#141315] dark:text-white">3. Inicio del Cuidado</h3>
+<p class="text-[#736f7b] dark:text-gray-400 px-4">Comenzamos el servicio con seguimiento continuo de calidad y satisfacción.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Coverage Section -->
+<section class="py-20 px-4 bg-background-light dark:bg-background-dark" id="cobertura">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl sm:text-4xl font-bold text-[#141315] dark:text-white mb-6">Cobertura en Córdoba</h2>
+<p class="text-lg text-[#736f7b] dark:text-gray-400 mb-8">
+                    Llegamos donde nos necesites. Prestamos servicio en Córdoba capital y en las principales localidades de la provincia, asegurando que la distancia no sea un impedimento para recibir el mejor cuidado.
+                </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-center gap-2 p-3 bg-white dark:bg-[#252525] rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-medium dark:text-white">Córdoba Capital</span>
+</div>
+<div class="flex items-center gap-2 p-3 bg-white dark:bg-[#252525] rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-medium dark:text-white">Lucena</span>
+</div>
+<div class="flex items-center gap-2 p-3 bg-white dark:bg-[#252525] rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-medium dark:text-white">Puente Genil</span>
+</div>
+<div class="flex items-center gap-2 p-3 bg-white dark:bg-[#252525] rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-medium dark:text-white">Montilla</span>
+</div>
+<div class="flex items-center gap-2 p-3 bg-white dark:bg-[#252525] rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-medium dark:text-white">Priego de Córdoba</span>
+</div>
+<div class="flex items-center gap-2 p-3 bg-white dark:bg-[#252525] rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<span class="font-medium dark:text-white">Palma del Río</span>
+</div>
+</div>
+</div>
+<div class="h-[400px] w-full rounded-2xl overflow-hidden shadow-lg bg-gray-200" data-alt="Map showing Cordoba province region" data-location="Córdoba, Spain" style="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-oxizfFX2z7Wem93VND_F9Kzldq-zbwZ21ZGOfp9LtBBZmNoMN4ogC-CjsVNqv7QDacYWo9WsdHs4UNm71u6VnwbOEnHdn70NauqdkIPTZVRF89cteqskS5FlIaIiwTMd2JuFGjvQKDk7eNf0fPFkpow_s9e-jb8DpdUBgKLNphp6ZtXRmiNcGuj9V1zU17i0CQXEAO0AZ4H6XkJwn0Zb5HCj8G3k-t7bhffxSmycwRqD0sj7fON5QcHr8ESaLnEmWZjzvu2sHY">
+<!-- Using a gradient abstract map placeholder as per no-external-map-api constraint -->
+<div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxfY5Uqg-a6S57-knld-lKWvi3ZJNE-BOyaI5fd3GHH7B8xmPcqqLibOl8sGloWH-ovpVCgSMJe7UdNXu7vobCB1A-Qv4I_37qXXWHWO99nZ8S__MPTBzL962-fONzJrRBeHdACDkVp4G6ZOzQnz3B8kg3gIyyzOs3IHJGDul8jikBJEP1dU5kWp80cGkmGkbgxK5U-G1Z8zCGgw66CnUOHueqLGN8GE7sWj_fqWwM-A2a327OsiiuInXgsEKGiF0wdbBa7KTHUuI");'>
+<div class="w-full h-full bg-primary/20 backdrop-grayscale flex items-center justify-center">
+<div class="bg-white/90 dark:bg-black/80 p-4 rounded-xl shadow-xl backdrop-blur-sm text-center">
+<span class="material-symbols-outlined text-4xl text-primary mb-2">map</span>
+<p class="font-bold text-lg dark:text-white">Área de Servicio</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Provincia de Córdoba</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-20 px-4 bg-white dark:bg-[#1e1e1e]" id="contacto">
+<div class="max-w-5xl mx-auto bg-primary/5 dark:bg-[#252525] rounded-3xl overflow-hidden shadow-xl border border-primary/10">
+<div class="flex flex-col md:flex-row">
+<!-- Form Info Side -->
+<div class="p-10 md:w-5/12 bg-primary text-white flex flex-col justify-between">
+<div>
+<h2 class="text-3xl font-bold mb-4">Hablemos</h2>
+<p class="text-white/80 mb-8">Cuéntanos qué necesitas y te orientaremos sin compromiso.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-2xl bg-white/20 p-2 rounded-lg">phone</span>
+<div>
+<p class="text-xs font-medium uppercase text-white/60 tracking-wider">Teléfono</p>
+<p class="text-lg font-bold">957 000 000</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-2xl bg-white/20 p-2 rounded-lg">mail</span>
+<div>
+<p class="text-xs font-medium uppercase text-white/60 tracking-wider">Email</p>
+<p class="text-lg font-bold">info@auxiplus.es</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-2xl bg-white/20 p-2 rounded-lg">location_on</span>
+<div>
+<p class="text-xs font-medium uppercase text-white/60 tracking-wider">Oficina</p>
+<p class="text-lg font-bold">Av. Gran Capitán, Córdoba</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-12 flex gap-4">
+<div class="size-10 rounded-full bg-white/20 hover:bg-white/30 cursor-pointer flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+<div class="size-10 rounded-full bg-white/20 hover:bg-white/30 cursor-pointer flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</div>
+</div>
+</div>
+<!-- Form Inputs Side -->
+<div class="p-10 md:w-7/12 bg-white dark:bg-[#1e1e1e]">
+<form class="space-y-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-[#141315] dark:text-white">Nombre</label>
+<input class="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-background-light dark:bg-[#2c2c2c] px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:text-white" placeholder="Tu nombre" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-[#141315] dark:text-white">Teléfono</label>
+<input class="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-background-light dark:bg-[#2c2c2c] px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:text-white" placeholder="600 000 000" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-[#141315] dark:text-white">¿Qué necesitas?</label>
+<select class="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-background-light dark:bg-[#2c2c2c] px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:text-white">
+<option>Información General</option>
+<option>Cuidado Interno</option>
+<option>Cuidado por Horas</option>
+<option>Acompañamiento Hospitalario</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-bold text-[#141315] dark:text-white">Mensaje</label>
+<textarea class="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-background-light dark:bg-[#2c2c2c] px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary dark:text-white resize-none" placeholder="Explícanos brevemente la situación..." rows="4"></textarea>
+</div>
+<button class="w-full rounded-lg bg-primary py-3 px-6 text-sm font-bold text-white shadow-lg hover:bg-primary/90 transition-all hover:scale-[1.01]" type="button">
+                            Enviar Solicitud
+                        </button>
+<p class="text-xs text-center text-gray-500 mt-4">
+                            Al enviar este formulario aceptas nuestra política de privacidad.
+                        </p>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark text-white py-12 px-4 border-t border-gray-800">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
+<h2 class="text-xl font-bold">Auxiplus</h2>
+</div>
+<p class="text-sm text-gray-400">Cuidado de confianza para quienes más quieres en Córdoba.</p>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-4">Servicios</h3>
+<ul class="space-y-2 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Ayuda a Domicilio</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Acompañamiento</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cuidado Hospitalario</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Higiene y Aseo</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-4">Legal</h3>
+<ul class="space-y-2 text-sm text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Aviso Legal</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookies</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-lg mb-4">Contacto</h3>
+<p class="text-sm text-gray-400 mb-2">Córdoba, España</p>
+<p class="text-sm text-gray-400">Tel: 957 000 000</p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+            © 2026 Auxiplus Servicios Asistenciales. Todos los derechos reservados.
+        </div>
+</footer>
+<!-- Fixed WhatsApp Button -->
+<a aria-label="Contactar por WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center justify-center size-14 bg-[#25D366] rounded-full shadow-2xl hover:scale-110 transition-transform cursor-pointer group" href="#">
+<span class="material-symbols-outlined text-white text-3xl">chat</span>
+<span class="absolute right-16 bg-white dark:bg-[#333] px-3 py-1 rounded-lg text-xs font-bold shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap text-[#141315] dark:text-white pointer-events-none">
+            ¡Escríbenos!
+        </span>
+</a>
+</body></html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>Auxiplus - Nuestra Cobertura</title>
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="dist/css/output.css">
+    </head>
+    <body class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark font-body overflow-x-hidden text-slate-900 dark:text-gray-100">
+        <div class="w-full bg-white dark:bg-slate-900 border-b border-solid border-slate-100 dark:border-slate-800">
+            <div class="layout-container flex justify-center">
+                <div class="layout-content-container flex w-full max-w-[1200px] flex-col px-4 md:px-10">
+                    <header class="sticky top-0 z-50 w-full border-b border-[#f2f2f3] bg-white/95 backdrop-blur-sm dark:bg-[#18171b]/95 dark:border-gray-800">
+                        <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+                            <!-- Logo -->
+                            <a href="https://juanjosejurado.github.io/auxiplus/" class="flex items-center gap-3">
+                                <div class="flex size-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                                    <span class="material-symbols-outlined text-3xl">medical_services</span>
+                                </div>
+                                <span class="text-xl font-bold tracking-tight text-text-main dark:text-white">Auxiplus</span>
+                            </a>
+                            <!-- NAV DESKTOP -->
+                            <nav class="hidden lg:flex items-center gap-6" role="navigation" aria-label="Menú principal">
+                                <!-- Servicios -->
+                                <div class="relative group">
+                                    <a href="https://juanjosejurado.github.io/auxiplus/servicios" class="flex items-center gap-1 text-sm font-medium text-text-main hover:text-primary dark:text-gray-300 dark:hover:text-white">
+                                        Servicios
+                                        <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+                                    </a>
+                                    <div class="absolute top-full left-0 mt-2 w-64 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-[#18171b] shadow-lg p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-50">
+                                        <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_mayores">Cuidado de Mayores</a>
+                                        <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_dependientes">Asistencia a Dependientes</a>
+                                        <a class="block px-4 py-2 text-sm rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/apoyo_mujeres_supervivientes">Apoyo a Mujeres Supervivientes</a>
+                                        <a class="block px-4 py-2 text-sm font-semibold text-primary bg-primary/5 rounded-lg" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">Asistencia Urgente 24h</a>
+                                    </div>
+                                </div>
+                                <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">Nosotros</a>
+                                <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/calculadora_de_precios">Calculadora</a>
+                                <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">Cobertura</a>
+                                <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/blog">Blog</a>
+                                <a class="text-sm font-medium hover:text-primary" href="#faq">Preguntas</a>
+                                <a class="text-sm font-medium hover:text-primary" href="https://juanjosejurado.github.io/auxiplus/contacto">Contacto</a>
+                            </nav>
+                            <!-- CTA + MOBILE -->
+                            <div class="flex items-center gap-3">
+                                <a href="tel:+34900123456" class="hidden sm:flex items-center gap-2 rounded-lg h-10 px-5 bg-primary hover:bg-primary-dark text-white text-sm font-bold transition shadow-sm focus:ring-2 ring-primary">
+                                    <span class="material-symbols-outlined text-[18px]">call</span>
+                                    Llámanos
+                                </a>
+                                <button id="mobile-menu-btn" class="flex lg:hidden p-2 text-gray-600 dark:text-gray-300" aria-label="Abrir menú">
+                                    <span class="material-symbols-outlined">menu</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- MENU MOBILE -->
+                        <div id="mobile-menu" class="lg:hidden hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-[#18171b]">
+                            <nav class="px-4 py-6 space-y-6">
+                                <!-- Servicios -->
+                                <details class="group">
+                                    <summary class="flex items-center justify-between h-12 px-2 text-sm font-semibold rounded-lg cursor-pointer active:bg-gray-100 dark:active:bg-gray-800">
+                                        Servicios
+                                        <span class="material-symbols-outlined transition-transform group-open:rotate-180">
+                                            expand_more
+                                        </span>
+                                    </summary>
+                                    <div class="mt-4 space-y-2 pl-4">
+                                        <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_mayores">
+                                            Cuidado de Mayores
+                                        </a>
+                                        <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_a_personas_dependientes">
+                                            Asistencia a Dependientes
+                                        </a>
+                                        <a class="flex items-center h-11 px-2 rounded-lg text-sm active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/servicios/apoyo_mujeres_supervivientes">
+                                            Apoyo a Mujeres Supervivientes
+                                        </a>
+                                        <a class="flex items-center h-11 px-3 rounded-lg text-sm font-semibold text-primary bg-primary/10" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">
+                                            Asistencia Urgente 24h
+                                        </a>
+                                    </div>
+                                </details>
+                                <!-- Enlaces principales -->
+                                <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">
+                                    Nosotros
+                                </a>
+                                <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/calculadora_de_precios">
+                                    Calculadora
+                                </a>
+                                <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">
+                                    Cobertura
+                                </a>
+                                <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/blog">
+                                    Blog
+                                </a>
+                                <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="#faq">
+                                    Preguntas
+                                </a>
+                                <a class="flex items-center h-12 px-2 rounded-lg text-sm font-medium active:bg-gray-100 dark:active:bg-gray-800" href="https://juanjosejurado.github.io/auxiplus/contacto">
+                                    Contacto
+                                </a>
+                                <!-- CTA PRINCIPAL MOBILE -->
+                                <a href="tel:+34900123456" class="mt-6 flex items-center justify-center gap-2 h-12 rounded-lg bg-primary text-white text-sm font-bold shadow-md active:bg-primary/90">
+                                    <span class="material-symbols-outlined text-[18px]">call</span>
+                                    Llámanos ahora
+                                </a>
+                            </nav>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+        <div class="w-full bg-white dark:bg-background-dark">
+            <div class="flex justify-center py-12 md:py-20">
+                <div class="flex w-full max-w-[1200px] flex-col px-4 md:px-10">
+                    <div class="@container">
+                        <div class="flex flex-col gap-10 @[864px]:flex-row items-center">
+                            <div class="flex flex-col gap-6 flex-1 text-center @[864px]:text-left">
+                                <div class="flex flex-col gap-4">
+                                    <span class="text-primary font-bold tracking-wider text-sm uppercase">Asistencia a domicilio</span>
+                                    <h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl lg:text-6xl">
+                                        Nuestra Cobertura:
+                                        <span class="text-primary">Córdoba</span>
+                                        y toda Andalucía
+                                    </h1>
+                                    <p class="text-slate-600 dark:text-gray-300 text-lg font-normal leading-relaxed max-w-xl mx-auto @[864px]:mx-0">
+                                        Llegamos a donde nos necesites. Descubre nuestras zonas de servicio, tiempos de respuesta garantizados y disponibilidad en tu municipio.
+                                    </p>
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center @[864px]:justify-start">
+                                    <button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-primary hover:bg-primary/90 transition-all text-white text-base font-bold leading-normal tracking-[0.015em] shadow-lg shadow-primary/30">
+                                        <span class="mr-2 material-symbols-outlined text-[20px]">search</span>
+                                        <span class="truncate">Consultar mi código postal</span>
+                                    </button>
+                                    <button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-primary/10 hover:bg-primary/20 transition-all text-primary text-base font-bold leading-normal tracking-[0.015em]">
+                                        <span class="truncate">Ver mapa completo</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="w-full flex-1 relative">
+                                <div class="w-full aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl relative bg-gray-100 dark:bg-gray-800" data-alt="Map of Andalusia region with highlighted service zones in Cordoba" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJhI5ojWLtCwOIIo-ViWygyo-Egm8_yqNVbuj5Vf3aGXrP-fJQqNiwLZ9N3-wnKlDDbkHP-SpZaonJ6s1andxqI_PVBbqG9l96KQmog_UjXmG4DeUGuIVguuKA_3kzIrboTr5YVfvf7u1-S0kg8aiOTE2_6m6dcVAJ9GuorfrV98NUkr3XeqAZ73Jgn0QD4nt8KI8YKicD_A61YdDLLtyrzGoatl7smZuym0i89_vafC-mK4IaqkDGWG1bmMLQUTd3dgBpIQHaKQY"); background-size: cover; background-position: center;'>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                                        <div class="flex items-center gap-3 bg-white/90 backdrop-blur-md dark:bg-black/70 p-3 rounded-lg shadow-lg">
+                                            <div class="size-10 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center text-green-600 dark:text-green-400">
+                                                <span class="material-symbols-outlined">verified</span>
+                                            </div>
+                                            <div>
+                                                <p class="text-xs text-slate-500 dark:text-gray-400 font-bold uppercase">Cobertura Garantizada</p>
+                                                <p class="text-sm font-bold text-slate-900 dark:text-white">
+                                                    Córdoba Capital
+                                                    <span class="text-primary">•</span>
+                                                    Provincia
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-center py-8 bg-background-light dark:bg-background-dark">
+            <div class="flex w-full max-w-[1200px] flex-col px-4 md:px-10">
+                <div class="sticky top-0 z-10 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm pt-4 pb-2">
+                    <div class="flex border-b border-slate-200 dark:border-gray-700 gap-2 md:gap-8 overflow-x-auto hide-scrollbar">
+                        <a class="group flex flex-col items-center justify-center border-b-[3px] border-primary pb-3 pt-2 px-2 min-w-[140px] cursor-pointer" href="#">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">location_city</span>
+                                <p class="text-slate-900 dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">Córdoba Capital</p>
+                            </div>
+                        </a>
+                        <a class="group flex flex-col items-center justify-center border-b-[3px] border-transparent hover:border-primary/30 pb-3 pt-2 px-2 min-w-[140px] cursor-pointer" href="#">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="material-symbols-outlined text-slate-500 dark:text-gray-400 group-hover:text-primary transition-colors">map</span>
+                                <p class="text-slate-500 dark:text-gray-400 group-hover:text-primary transition-colors text-sm font-bold leading-normal tracking-[0.015em]">Provincia</p>
+                            </div>
+                        </a>
+                        <a class="group flex flex-col items-center justify-center border-b-[3px] border-transparent hover:border-primary/30 pb-3 pt-2 px-2 min-w-[140px] cursor-pointer" href="#">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="material-symbols-outlined text-slate-500 dark:text-gray-400 group-hover:text-primary transition-colors">travel_explore</span>
+                                <p class="text-slate-500 dark:text-gray-400 group-hover:text-primary transition-colors text-sm font-bold leading-normal tracking-[0.015em]">Andalucía</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="py-10 grid lg:grid-cols-12 gap-8">
+                    <div class="lg:col-span-7 flex flex-col gap-10">
+                        <div class="flex flex-col gap-4">
+                            <div class="flex items-center gap-3">
+                                <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                                    <span class="material-symbols-outlined">apartment</span>
+                                </div>
+                                <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Córdoba Capital</h2>
+                            </div>
+                            <p class="text-slate-600 dark:text-gray-300">
+                                Ofrecemos servicio integral en todos los barrios de Córdoba capital con tiempos de respuesta reducidos. Nuestro equipo central se coordina para garantizar asistencia en menos de 2 horas para urgencias en el casco urbano.
+                            </p>
+                            <div class="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-sm border border-slate-100 dark:border-slate-800">
+                                <h3 class="font-bold text-lg mb-4 text-slate-900 dark:text-white flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-green-500">check_circle</span>
+                                    Zonas de atención prioritaria
+                                </h3>
+                                <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                    <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-gray-300">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                        Centro
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-gray-300">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                        Ciudad Jardín
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-gray-300">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                        El Brillante
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-gray-300">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                        Santa Rosa
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-gray-300">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                        Fátima
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-gray-300">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                        Sector Sur
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-gray-300">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                        Levante
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-gray-300">
+                                        <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                        Poniente
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-gray-300 italic text-primary">
+                                        + Todos los distritos
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="border-gray-200 dark:border-gray-800">
+                        <div class="flex flex-col gap-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                                        <span class="material-symbols-outlined">holiday_village</span>
+                                    </div>
+                                    <h2 class="text-2xl font-bold text-slate-900 dark:text-white">Provincia de Córdoba</h2>
+                                </div>
+                                <span class="text-sm font-medium text-slate-500 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">Desplazamiento incluido</span>
+                            </div>
+                            <p class="text-slate-600 dark:text-gray-300">
+                                Nuestra red de cuidadores se extiende por toda la provincia. Consulta si tu municipio cuenta con personal residente para evitar costes de desplazamiento.
+                            </p>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                                <div class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 hover:shadow-md transition-all group cursor-pointer">
+                                    <div class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 group-hover:bg-primary/10 flex items-center justify-center text-gray-400 group-hover:text-primary transition-colors mb-2">
+                                        <span class="material-symbols-outlined text-xl">location_on</span>
+                                    </div>
+                                    <span class="text-sm font-bold text-center">Lucena</span>
+                                </div>
+                                <div class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 hover:shadow-md transition-all group cursor-pointer">
+                                    <div class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 group-hover:bg-primary/10 flex items-center justify-center text-gray-400 group-hover:text-primary transition-colors mb-2">
+                                        <span class="material-symbols-outlined text-xl">location_on</span>
+                                    </div>
+                                    <span class="text-sm font-bold text-center">Puente Genil</span>
+                                </div>
+                                <div class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 hover:shadow-md transition-all group cursor-pointer">
+                                    <div class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 group-hover:bg-primary/10 flex items-center justify-center text-gray-400 group-hover:text-primary transition-colors mb-2">
+                                        <span class="material-symbols-outlined text-xl">location_on</span>
+                                    </div>
+                                    <span class="text-sm font-bold text-center">Montilla</span>
+                                </div>
+                                <div class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 hover:shadow-md transition-all group cursor-pointer">
+                                    <div class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 group-hover:bg-primary/10 flex items-center justify-center text-gray-400 group-hover:text-primary transition-colors mb-2">
+                                        <span class="material-symbols-outlined text-xl">location_on</span>
+                                    </div>
+                                    <span class="text-sm font-bold text-center">Priego</span>
+                                </div>
+                                <div class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 hover:shadow-md transition-all group cursor-pointer">
+                                    <div class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 group-hover:bg-primary/10 flex items-center justify-center text-gray-400 group-hover:text-primary transition-colors mb-2">
+                                        <span class="material-symbols-outlined text-xl">location_on</span>
+                                    </div>
+                                    <span class="text-sm font-bold text-center">Cabra</span>
+                                </div>
+                                <div class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 hover:shadow-md transition-all group cursor-pointer">
+                                    <div class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 group-hover:bg-primary/10 flex items-center justify-center text-gray-400 group-hover:text-primary transition-colors mb-2">
+                                        <span class="material-symbols-outlined text-xl">location_on</span>
+                                    </div>
+                                    <span class="text-sm font-bold text-center">Baena</span>
+                                </div>
+                                <div class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 hover:shadow-md transition-all group cursor-pointer">
+                                    <div class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 group-hover:bg-primary/10 flex items-center justify-center text-gray-400 group-hover:text-primary transition-colors mb-2">
+                                        <span class="material-symbols-outlined text-xl">location_on</span>
+                                    </div>
+                                    <span class="text-sm font-bold text-center">Palma del Río</span>
+                                </div>
+                                <div class="flex flex-col items-center p-4 bg-white dark:bg-slate-900 rounded-xl border border-slate-100 dark:border-slate-800 hover:border-primary/50 hover:shadow-md transition-all group cursor-pointer">
+                                    <div class="size-10 rounded-full bg-gray-50 dark:bg-gray-800 group-hover:bg-primary/10 flex items-center justify-center text-primary group-hover:text-primary transition-colors mb-2">
+                                        <span class="material-symbols-outlined text-xl">add</span>
+                                    </div>
+                                    <span class="text-sm font-bold text-center text-primary">Ver todos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <div class="sticky top-24 flex flex-col gap-6">
+                            <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-xl overflow-hidden border border-slate-100 dark:border-slate-800">
+                                <div class="p-4 border-b border-slate-100 dark:border-slate-800 flex justify-between items-center bg-gray-50 dark:bg-slate-800">
+                                    <h3 class="font-bold text-slate-900 dark:text-white">Mapa Interactivo</h3>
+                                    <div class="flex gap-2">
+                                        <span class="w-3 h-3 rounded-full bg-primary" title="Alta disponibilidad"></span>
+                                        <span class="w-3 h-3 rounded-full bg-primary/40" title="Disponibilidad estándar"></span>
+                                    </div>
+                                </div>
+                                <div
+                                    class="w-full aspect-[4/5] bg-gray-200 relative"
+                                    data-alt="Google Maps view of Cordoba and surrounding municipalities"
+                                    data-location="Córdoba, Spain"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmI691dEhzxkwPFzheukop-nyFw1mFZlKbd-333U64sdwuMydEtj6mu_uReL6jfxm4UEVo_bPoSHKYW4mzxW_UteWfCWkAsnY2vfYrNhvkSpbp9XoiIZ02PLxYEo0dxlCCOXSE2hja632iQTBUBLbSZFHTk8RUISsU33WeBBTUaXYHX6RCxuZWm-YoBT2RnVf35hzLTFqK4_7QNboW7TB8p5VJukmWshFyhxbXheUYB6y4K-x6BFcvZQVCw4nuGg7g3_LgHKgN09M"); background-size: cover; background-position: center;'
+                                >
+                                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        <div class="relative">
+                                            <div class="absolute -top-3 -left-3 size-6 bg-primary/30 rounded-full animate-ping"></div>
+                                            <span class="material-symbols-outlined text-4xl text-primary drop-shadow-md">location_on</span>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-4 left-4 right-4 bg-white dark:bg-slate-900 p-4 rounded-xl shadow-lg border-l-4 border-primary">
+                                        <p class="text-xs font-bold text-slate-500 uppercase mb-1">Tu ubicación actual</p>
+                                        <p class="font-bold text-sm text-slate-900 dark:text-white mb-2">¿Necesitas ayuda cerca de ti?</p>
+                                        <button class="w-full py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-xs font-bold rounded-lg transition-colors">
+                                            Localizar servicios cercanos
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-primary/5 dark:bg-primary/10 rounded-xl p-6 border border-primary/10">
+                                <h3 class="font-bold text-lg mb-4 text-slate-900 dark:text-white">Preguntas Frecuentes</h3>
+                                <div class="flex flex-col gap-4">
+                                    <details class="group">
+                                        <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-sm text-slate-900 dark:text-white">
+                                            <span>¿Cobran desplazamiento?</span>
+                                            <span class="transition group-open:rotate-180">
+                                                <span class="material-symbols-outlined text-primary">expand_more</span>
+                                            </span>
+                                        </summary>
+                                        <p class="text-slate-600 dark:text-gray-400 mt-2 text-sm">
+                                            No cobramos desplazamiento dentro de Córdoba Capital. Para la provincia, depende de la disponibilidad de cuidadores locales.
+                                        </p>
+                                    </details>
+                                    <div class="h-px bg-primary/10 w-full"></div>
+                                    <details class="group">
+                                        <summary class="flex justify-between items-center font-medium cursor-pointer list-none text-sm text-slate-900 dark:text-white">
+                                            <span>¿Llegan a zonas rurales?</span>
+                                            <span class="transition group-open:rotate-180">
+                                                <span class="material-symbols-outlined text-primary">expand_more</span>
+                                            </span>
+                                        </summary>
+                                        <p class="text-slate-600 dark:text-gray-400 mt-2 text-sm">
+                                            Sí, cubrimos cortijos y zonas rurales con un plan de asistencia personalizado. Consúltanos.
+                                        </p>
+                                    </details>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+            <div class="flex justify-center py-16">
+                <div class="flex w-full max-w-[960px] flex-col px-4 text-center">
+                    <div class="size-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary">
+                        <span class="material-symbols-outlined text-3xl">support_agent</span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+                        ¿No encuentras tu municipio?
+                    </h2>
+                    <p class="text-slate-600 dark:text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+                        Nuestra red crece cada día. Llámanos y verificaremos la disponibilidad de personal cualificado en tu zona en menos de 24 horas.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-primary hover:bg-primary/90 transition-all text-white text-base font-bold shadow-lg shadow-primary/20">
+                            Contactar ahora
+                        </button>
+                        <button class="flex min-w-[200px] cursor-pointer items-center justify-center rounded-xl h-12 px-6 bg-white dark:bg-transparent border border-slate-200 dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all text-slate-900 dark:text-white text-base font-bold">
+                            957 00 00 00
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bg-white border-t border-gray-200 pt-16 pb-8 dark:bg-[#18171b] dark:border-gray-800" id="contacto">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-2 text-primary">
+                            <span class="material-symbols-outlined text-3xl">medical_services</span>
+                            <span class="text-xl font-bold text-text-main dark:text-white">Auxiplus</span>
+                        </div>
+                        <p class="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
+                            Comprometidos con el bienestar de las familias en Andalucía. Cuidamos de los tuyos como si fueran los nuestros.
+                        </p>
+                        <div class="flex gap-4 pt-2">
+                            <a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white" href="#">
+                                <span class="sr-only">Facebook</span>
+                                <svg
+                                    aria-hidden="true"
+                                    class="h-6 w-6"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                            <a class="text-text-muted hover:text-primary dark:text-gray-500 dark:hover:text-white" href="#">
+                                <span class="sr-only">Instagram</span>
+                                <svg
+                                    aria-hidden="true"
+                                    class="h-6 w-6"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.468 2.373c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" fill-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Explora</h3>
+                        <ul class="flex flex-col gap-3">
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/sobre_auxiplus">Sobre Nosotros</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/nuestra_cobertura">Cobertura en Andalucía</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Blog y Recursos</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-red-500 hover:text-red-600 font-semibold" href="https://juanjosejurado.github.io/auxiplus/servicios/asistencia_urgente_24h">Asistencia Urgente 24h</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Blog</h3>
+                        <ul class="flex flex-col gap-3">
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Cuidados</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Dependencia</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Recursos</a>
+                            </li>
+                            <li>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="https://juanjosejurado.github.io/auxiplus/blog">Mujeres supervivientes</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="mb-4 text-sm font-bold uppercase tracking-wider text-text-main dark:text-white">Contacto</h3>
+                        <ul class="flex flex-col gap-3">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm mt-0.5">location_on</span>
+                                <span class="text-sm text-text-muted dark:text-gray-400">
+                                    Av. Gran Capitán 23, 14008
+                                    <br>
+                                    Córdoba, España
+                                </span>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm">call</span>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="tel:+34900000000">+34 900 000 000</a>
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary text-sm">mail</span>
+                                <a class="text-sm text-text-muted hover:text-primary dark:text-gray-400 dark:hover:text-white" href="mailto:info@auxiplus.com">info@auxiplus.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-12 border-t border-gray-100 pt-8 dark:border-gray-800">
+                    <p class="text-center text-xs text-text-muted dark:text-gray-500">
+                        © 2026 Auxiplus Asistencia a Domicilio. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+        </script>
+    </body>
+</html>
