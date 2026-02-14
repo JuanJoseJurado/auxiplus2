@@ -5,16 +5,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#6b5b95",
-        secondary: "#887bb0",
+        primary: "#047f5a",
+        "primary-dark": "#024530",
+        secondary: "#aea89e",
         "background-light": "#fcfbfc",
         "background-dark": "#18171b",
         "text-main": "#141315",
         "text-muted": "#736f7b",
       },
       fontFamily: {
-        display: ["Poppins", "Inter", "sans-serif"],
-        body: ["Inter", "sans-serif"],
+        display: ["Bryant", "sans-serif"],
+        body: ["Bryant", "sans-serif"],
       },
       borderRadius: {
         DEFAULT: "0.5rem",

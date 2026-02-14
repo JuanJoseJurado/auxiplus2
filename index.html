@@ -4,14 +4,69 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <title>Auxiplus - Asistencia a Domicilio en Córdoba</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Poppins:wght@400;600&display=swap"
-            rel="stylesheet"
-            media="print"
-            onload="this.media='all'"
-        >
+        <!-- Bryant Font -->
+        <style>
+            /* Bryant Light - 300 */
+            @font-face {
+                font-family: 'Bryant';
+                src: url('assets/fonts/BryantWeb-Light.woff2') format('woff2'),
+                     url('assets/fonts/BryantWeb-Light.woff') format('woff'),
+                     url('assets/fonts/BryantWeb-Light.ttf') format('truetype');
+                font-weight: 300;
+                font-style: normal;
+                font-display: swap;
+            }
+            /* Bryant Regular - 400 */
+            @font-face {
+                font-family: 'Bryant';
+                src: url('assets/fonts/BryantWeb-Regular.woff2') format('woff2'),
+                     url('assets/fonts/BryantWeb-Regular.woff') format('woff'),
+                     url('assets/fonts/BryantWeb-Regular.ttf') format('truetype');
+                font-weight: 400;
+                font-style: normal;
+                font-display: swap;
+            }
+            /* Bryant Medium - 500 */
+            @font-face {
+                font-family: 'Bryant';
+                src: url('assets/fonts/BryantWeb-Medium.woff2') format('woff2'),
+                     url('assets/fonts/BryantWeb-Medium.woff') format('woff'),
+                     url('assets/fonts/BryantWeb-Medium.ttf') format('truetype');
+                font-weight: 500;
+                font-style: normal;
+                font-display: swap;
+            }
+            /* Bryant Medium - 600 (usando Medium como fallback) */
+            @font-face {
+                font-family: 'Bryant';
+                src: url('assets/fonts/BryantWeb-Medium.woff2') format('woff2'),
+                     url('assets/fonts/BryantWeb-Medium.woff') format('woff'),
+                     url('assets/fonts/BryantWeb-Medium.ttf') format('truetype');
+                font-weight: 600;
+                font-style: normal;
+                font-display: swap;
+            }
+            /* Bryant Bold Compressed - 700 */
+            @font-face {
+                font-family: 'Bryant';
+                src: url('assets/fonts/BryantWeb-BoldCompressed.woff2') format('woff2'),
+                     url('assets/fonts/BryantWeb-BoldCompressed.woff') format('woff'),
+                     url('assets/fonts/BryantWeb-BoldCompressed.ttf') format('truetype');
+                font-weight: 700;
+                font-style: normal;
+                font-display: swap;
+            }
+            /* Bryant Bold Compressed - 800 */
+            @font-face {
+                font-family: 'Bryant';
+                src: url('assets/fonts/BryantWeb-BoldCompressed.woff2') format('woff2'),
+                     url('assets/fonts/BryantWeb-BoldCompressed.woff') format('woff'),
+                     url('assets/fonts/BryantWeb-BoldCompressed.ttf') format('truetype');
+                font-weight: 800;
+                font-style: normal;
+                font-display: swap;
+            }
+        </style>
         <link
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
             rel="stylesheet"
@@ -23,7 +78,7 @@
         <style>
             .swiper { width: 100%; padding: 50px 0 !important; }
             .swiper-slide { height: auto; display: flex; align-items: stretch; }
-            .swiper-pagination-bullet-active { background: var(--primary, #6b5b95) !important; }
+            .swiper-pagination-bullet-active { background: var(--primary, #047f5a) !important; }
         </style>
     </head>
     <body class="bg-background-light dark:bg-background-dark text-text-main dark:text-white antialiased">
@@ -69,17 +124,17 @@
             </header>
             <main class="flex-1">
                 <!-- Hero Section -->
-                <div class="relative w-full font-['Inter',sans-serif]">
+                <div class="relative w-full">
                     <div class="relative flex min-h-[500px] sm:min-h-[600px] flex-col justify-end overflow-hidden bg-cover bg-center px-4 pb-12 pt-16 sm:px-10 sm:pt-20 lg:px-20" style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvkUo74UelbTMRsfKqggqMhM3FX1bCArct6clVfbkW1_5z0_mYIdVsw7XeWVRKKGXZBSHdkxH3qRUR7uvepfXAMof0jGQECalrl7dU2rqxZ3TwqDH0fMybxJAiyV33c5oUCWD3NYhbUqIQNiduNSqQEjr6bZyjwl2i_JPRPaVxkplKksrG7b40bR32qk7JM2KU7t-wxQfP0R9eD7CAylyxERFOyRIKss-CiCtF9JsMhaF8oOzDviLl8AnuozFrNi-YqB0N8z3ZThY");'>
                         <div class="max-w-3xl">
                             <div class="inline-flex w-fit items-center rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-white mb-6">
                                 <span class="mr-1 h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
                                 Servicio de Urgencia 24h Disponible
                             </div>
-                            <h1 class="text-white text-3xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-4 sm:mb-6 drop-shadow-lg font-['Inter']">
+                            <h1 class="text-white text-3xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-4 sm:mb-6 drop-shadow-lg">
                                 Cuidamos a tus seres queridos como si fueran de nuestra familia
                             </h1>
-                            <h2 class="text-white/90 text-lg sm:text-xl font-medium leading-relaxed mb-6 sm:mb-8 max-w-2xl drop-shadow-md font-['Inter']">
+                            <h2 class="text-white/90 text-lg sm:text-xl font-medium leading-relaxed mb-6 sm:mb-8 max-w-2xl drop-shadow-md">
                                 Ayuda profesional en el hogar que te devuelve la tranquilidad. Disponibles 24 horas en Córdoba.
                             </h2>
                             <div class="flex flex-col sm:flex-row gap-4">
